@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('abd');
 });
+
+
+Route::get('/abd', function () {
+    return view('welcome');
+});
+
+
