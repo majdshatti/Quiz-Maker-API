@@ -17,13 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('abd');
-});
-
-
-Route::get('/abd', function () {
-    return view('welcome');
-});
-
 
