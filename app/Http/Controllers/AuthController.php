@@ -50,10 +50,16 @@ class AuthController extends Controller
             );
         }
 
+        // Incase function returned a falsy value
+        $resMessage = getResMessage("registered")
+            ? getResMessage("registered")
+            : "";
+
         // Return success response
         return response(
             [
                 "success" => true,
+                "message" => $resMessage,
                 "data" => $user,
                 "token" => $token,
             ],
