@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\ErrorResException;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -31,32 +33,29 @@ class AuthController extends Controller
             "slug" => Str::slug($body["name"]),
         ];
 
+        // Send email to user
+        $isMailSent = sendMail(
+            $body["email"],
+            "Quiz Maker Account Activation",
+            $default["remember_token"]
+        );
+
+        if (!$isMailSent) {
+            throw new ErrorResException(
+                getResMessage("serverError", [
+                    "path" => "send verification code",
+                ])
+            );
+        }
+
         // Create user
         $user = User::create(array_merge($body, $default));
 
-        // Send email to user
-        sendMail(
-            $user["email"],
-            "Quiz Maker Account Activation",
-            $user["remember_token"]
-        );
-
-        //TODO: JWT TOKEN
-        // Create a token
-        $token = $user->createToken("myapptoken")->plainTextToken;
-
-        // Incase function returned a falsy value
-        $resMessage = getResMessage("registered")
-            ? getResMessage("registered")
-            : "";
-
         // Return success response
-        return response(
+        return sendSuccRes(
             [
-                "success" => true,
-                "message" => $resMessage,
                 "data" => $user,
-                "token" => $token,
+                "keyMessage" => "registered",
             ],
             201
         );
