@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\VerifyAccountController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VerifyAccountController;
 
 // Reigster a user
 Route::post("/register", [AuthController::class, "register"]);
