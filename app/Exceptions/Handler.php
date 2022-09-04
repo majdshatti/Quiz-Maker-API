@@ -64,6 +64,11 @@ class Handler extends ExceptionHandler
             return errorResponse($exception);
         }
 
+        // Custom Exception
+        if ($exception instanceof ErrorResException) {
+            return errorResponse($exception);
+        }
+
         return parent::render($request, $exception);
     }
 }
