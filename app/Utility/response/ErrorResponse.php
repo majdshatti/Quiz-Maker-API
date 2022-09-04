@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Returns error response to the client.
+ *
+ * @param Throwable $exception An instance of throwable exception class.
+ *
+ * @return JsonResponse
+ */
 if (!function_exists("errorResponse")) {
     function errorResponse($exception)
     {
@@ -13,31 +20,10 @@ if (!function_exists("errorResponse")) {
         // Response object
         $response = [];
         $response["success"] = false;
+        $response["message"] = $exception->getMessage();
 
-        // Check exception status and set response message
-        switch ($statusCode) {
-            case 401:
-                $response["message"] = getResMessage("401");
-                break;
-            case 403:
-                $response["message"] = getResMessage("403");
-                break;
-            case 404:
-                $response["message"] = getResMessage("404");
-                break;
-            case 405:
-                $response["message"] = getResMessage("405");
-                break;
-            case 422:
-                $response["message"] = getResMessage("422");
-                $response["errors"] = $exception->errors();
-                break;
-            default:
-                $response["message"] =
-                    $statusCode == 500
-                        ? getResMessage("500")
-                        : $exception->getMessage();
-                break;
+        if (method_exists($exception, "errors")) {
+            $response["errors"] = $exception->errors();
         }
 
         // Return json response
