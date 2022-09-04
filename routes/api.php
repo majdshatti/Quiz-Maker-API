@@ -10,9 +10,6 @@ use Illuminate\Support\Facades\Route;
 
 require_once "auth.php";
 
-Route::post('/login',[UserController::class,'login']);
-
-Route::post('/register',[AuthController::class,'register']);
 //*********************************/
 //******** Private Routes *********/
 //*********************************/
