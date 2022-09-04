@@ -14,9 +14,9 @@ class UtilityServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $allUtilityFiles = glob(app_path('Utility') . '/*.php');
+        $allUtilityFiles = glob(app_path("Utility") . "/*/*.php");
 
-        foreach($allUtilityFiles as $key => $utilityFile) {
+        foreach ($allUtilityFiles as $key => $utilityFile) {
             require_once $utilityFile;
         }
     }
