@@ -3,6 +3,8 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Validation\ValidationException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -31,9 +33,9 @@ class Handler extends ExceptionHandler
      * @var array<int, string>
      */
     protected $dontFlash = [
-        'current_password',
-        'password',
-        'password_confirmation',
+        "current_password",
+        "password",
+        "password_confirmation",
     ];
 
     /**
@@ -46,5 +48,22 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    public function render($request, Throwable $exception)
+    {
+        $exception = $this->prepareException($exception);
+
+        // Reform findOrFail exception message
+        if ($exception instanceof ModelNotFoundException) {
+            return errorResponse($exception);
+        }
+
+        // Reform validation exceptions
+        if ($exception instanceof ValidationException) {
+            return errorResponse($exception);
+        }
+
+        return parent::render($request, $exception);
     }
 }
