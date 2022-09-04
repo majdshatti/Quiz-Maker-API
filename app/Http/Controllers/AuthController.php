@@ -61,4 +61,61 @@ class AuthController extends Controller
             201
         );
     }
+
+    //* @desc:Login user using email and password
+    //* @route:/api/login
+    //* @access: PUBLIC
+    public function login(Request $request)
+    {
+        $fields = $request->validate([
+           'email'=>'required|string',
+           'password'=>'required|string' 
+        ]);
+
+        $user = User::where('email',$fields['email'])->first();
+
+        //Check the Email for the user if it is not correct.
+        if(!$user)
+        {
+            return response([
+                'message'=>'incorrect email'
+            ],401);
+        }
+
+        //Check the Password for the user if it is not correct.
+        if(!Hash::check($fields['password'],$user->password))
+        {
+            return response([
+                'message'=>'incorrect password'
+            ],401);
+        }
+
+        //return response for the user if everything was correct.
+        $token = $user->createToken('usertoken')->plainTextToken;
+        $response = [
+            'user' => $user,
+            'token' => $token
+        ];
+
+        return response($response,201);
+    }
+
+    //Logout
+    //* @desc:Logout
+    //* @route:/api/logout
+    //* @access: PUBLIC
+    public function logout(Request $request)
+    {
+        $request->user()->tokens()->delete();
+        
+       /* return sendSuccRes(
+            [
+                "data" => $user,
+                "keyMessage" => "registered",
+            ],
+            201
+        );
+    */
+    }
+
 }
