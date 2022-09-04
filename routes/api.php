@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 //*********************************/
@@ -8,11 +10,20 @@ use Illuminate\Support\Facades\Route;
 
 require_once "auth.php";
 
+Route::post('/login',[UserController::class,'login']);
+
+Route::post('/register',[AuthController::class,'register']);
 //*********************************/
 //******** Private Routes *********/
 //*********************************/
 
-Route::group(["middleware" => ["auth:sanctum"]], function () {});
+Route::group(["middleware" => ["auth:sanctum"]], function () {
+
+    Route::post('/logout',[UserController::class,'logout']);
+    Route::post('/changepassword',[UserController::class,'changePassword']);
+});
+
+
 
 //*********************************/
 //******** 404 Not Found **********/
