@@ -4,20 +4,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-//*********************************/
-//******** Public Routes **********/
-//*********************************/
-
 require_once "auth.php";
-
-//*********************************/
-//******** Private Routes *********/
-//*********************************/
-
-Route::group(["middleware" => ["auth:sanctum"]], function () {
-    Route::post("/logout", [UserController::class, "logout"]);
-    Route::post("/changepassword", [UserController::class, "changePassword"]);
-});
+require_once "user.php";
 
 //*********************************/
 //******** 404 Not Found **********/

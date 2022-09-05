@@ -26,6 +26,8 @@ if (!function_exists("getResMessage")) {
             case "created":
                 return ($path ? ucfirst($path) : "Record") .
                     " is created successfully";
+            case "creds":
+                return "invalid creds";
             case "deleted":
                 return ($path ? ucfirst($path) : "Record") .
                     " is deleted successfully";
@@ -36,6 +38,10 @@ if (!function_exists("getResMessage")) {
                 return "Forbbiden";
             case "invalidToken":
                 return "Invailed token provided";
+            case "logout":
+                return "Logged out";
+            case "notCorrect":
+                return ($value ? ucfirst($value) : "Value") . " does not correct";
             case "notExist":
                 return ($value ? ucfirst($value) : "Value") . " does not exist";
             case "notFound":
@@ -51,6 +57,7 @@ if (!function_exists("getResMessage")) {
                     ", if problem persists contact us at info@company.com";
             case "verified":
                 return "Account verified successfully";
+            
             default:
                 return false;
         }
