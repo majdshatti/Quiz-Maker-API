@@ -11,5 +11,5 @@ class ResetCodePassword extends Model
 
     public $table = "password_resets";
 
-    protected $fillable = ["email", "code", "created_at"];
+    protected $fillable = ["email", "code", "created_at","updated_at"];
 }
