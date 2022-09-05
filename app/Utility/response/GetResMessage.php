@@ -31,7 +31,7 @@ if (!function_exists("getResMessage")) {
                     " is deleted successfully";
             case "edited":
                 return ($path ? ucfirst($path) : "Record") .
-                    " is edited successfully ";
+                    " is edited successfully";
             case "forbbiden":
                 return "Forbbiden";
             case "invalidToken":
