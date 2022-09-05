@@ -76,27 +76,24 @@ class AuthController extends Controller
         //Check the Email for the user if it is not correct.
         if(!$user)
         {
-            return response([
-                'message'=>'incorrect email'
-            ],401);
+            throw new ErrorResException(getResMessage("creds"), 400);
         }
 
         //Check the Password for the user if it is not correct.
         if(!Hash::check($fields['password'],$user->password))
         {
-            return response([
-                'message'=>'incorrect password'
-            ],401);
+            throw new ErrorResException(getResMessage("creds"), 400);
         }
 
         //return response for the user if everything was correct.
         $token = $user->createToken('usertoken')->plainTextToken;
-        $response = [
-            'user' => $user,
-            'token' => $token
-        ];
-
-        return response($response,201);
+        return sendSuccRes(
+            [
+                'user' => $user,
+                'token' => $token,
+            ],
+            201
+        );
     }
 
     //Logout
@@ -107,14 +104,13 @@ class AuthController extends Controller
     {
         $request->user()->tokens()->delete();
         
-       /* return sendSuccRes(
+        return sendSuccRes(
             [
-                "data" => $user,
-                "keyMessage" => "registered",
+                "keyMessage" => "logout",
             ],
             201
         );
-    */
+    
     }
 
 }
