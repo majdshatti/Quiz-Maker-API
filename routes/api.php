@@ -15,12 +15,9 @@ require_once "auth.php";
 //*********************************/
 
 Route::group(["middleware" => ["auth:sanctum"]], function () {
-
-    Route::post('/logout',[UserController::class,'logout']);
-    Route::post('/changepassword',[UserController::class,'changePassword']);
+    Route::post("/logout", [UserController::class, "logout"]);
+    Route::post("/changepassword", [UserController::class, "changePassword"]);
 });
-
-
 
 //*********************************/
 //******** 404 Not Found **********/
