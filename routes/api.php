@@ -14,10 +14,9 @@ require_once "auth.php";
 //******** Private Routes *********/
 //*********************************/
 
-Route::group(["middleware" => ["auth:sanctum"]], function () {
+require_once "user.php";
 
-    Route::post('/logout',[UserController::class,'logout']);
-    Route::post('/changepassword',[UserController::class,'changePassword']);
+Route::group(["middleware" => ["auth:sanctum"]], function () {
 });
 
 
