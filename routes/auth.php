@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\VerifiyAccountController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VerifyAccountController;
 
 // Reigster a user
 Route::post("/register", [AuthController::class, "register"]);
@@ -15,6 +15,6 @@ Route::group(["middleware" => ["auth:sanctum"]], function () {
 
 // Verify a user account
 Route::post("/verify/{token}", [
-    VerifiyAccountController::class,
+    VerifyAccountController::class,
     "verifyAccount",
 ]);
