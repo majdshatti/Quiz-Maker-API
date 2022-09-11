@@ -31,24 +31,26 @@ class ForgotPasswordController extends Controller
         $data['code'] = mt_rand(100000, 999999);
         // Create a new code
         $codeData = ResetCodePassword::create($data);
-
+        if(!$codeData)
+        {
+            throw new ErrorResException(getResMessage("serverError","sending reset code"), 500);
+        }
         // Send email to user
         $subject = "Reset Your password";
 
-        $body = "We heard that you lost your password.Sorry about that!
-                You Can use the following code to reset your password :";
         $code = (string) $data['code'];   
-        $body =$body . $code;
+        $body = $code;
         $isMailSent = sendMail($data['email'],$subject,$body);
 
         if (!$isMailSent) {
             throw new ErrorResException(
                 getResMessage("serverError", [
-                    "path" => "send verification code",
+                    "path" => "send reset code",
                 ])
             );
         }
-        return response(['message' => trans('passwords.sent')], 200);
+        return sendSuccRes("codeSent",200);
+        
     }
 
 }

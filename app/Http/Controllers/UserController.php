@@ -15,7 +15,7 @@ class UserController extends Controller
 
     }
     //* @desc:Change password for the user
-    //* @route:/api/changePassword
+    //* @route:/user/{slug}/changepassword
     //* @access: PUBLIC
     public function changePassword(Request $request ,$slug)
     {
@@ -28,10 +28,10 @@ class UserController extends Controller
             'confirmed'] ,
          ]);
         
-         //Search for the user by slug to get th email.
+        //Search for the user by slug.
         $user = User::where('slug',$slug)->first();
         
-        //Check the Email for the user if it is correct.
+        //Check if the user exist
         if(!$user)
         {
             throw new ErrorResException(getResMessage("notExist", ["value" => $slug]), 404);
@@ -51,5 +51,48 @@ class UserController extends Controller
         ]);
         return getResMessage("edited","Password");
     }
-    
+
+    //* @desc:Edit user information
+    //* @route:/user/{slug}/edituser
+    //* @access: PUBLIC
+    public function edituser(Request $request,$slug)
+    {
+        $fields = $request->validate([
+            "newname" =>"required|string"
+         ]);
+         
+        //Search for the user by slug.
+        $user = User::where('slug',$slug)->first();
+        
+        //Check if the user exist
+        if(!$user)
+        {
+            throw new ErrorResException(getResMessage("notExist", ["value" => $slug]), 404);
+        }
+
+        User::where('slug',$slug)
+        ->update([
+            'name' => $fields['newname']
+         ]);
+
+        return getResMessage("edited","Name");
+    }
+
+    //* @desc:Delete user
+    //* @route:/user/{slug}/deleteuser
+    //* @access: PUBLIC
+    public function deleteUser(Request $request,$slug)
+    {
+        $user = User::where('slug',$slug)->first();
+
+        if(!$user)
+        {
+            throw new ErrorResException(getResMessage("notExist", ["value" => $slug]), 404);
+        }
+        
+        User::where('slug',$slug)
+        ->delete();
+
+        return getResMessage("deleted","User");
+    }
 }
