@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-
 use App\Exceptions\ErrorResException;
 use Illuminate\Support\Str;
 use App\Models\User;

@@ -1,12 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\ResetCodePassword;
+use App\Exceptions\ErrorResException;
 
-class ForgotPassowrd extends Controller
+class ForgotPasswordController extends Controller
 {
     //
     
@@ -15,35 +18,37 @@ class ForgotPassowrd extends Controller
     //* @route:/api/forgetPassword
     //* @access: PUBLIC
     
-    public function forgetPassword(Request $request)
+    public function forgotPassword(Request $request)
     {
-        $fields = $request->validate([
-            'email'=>'required|string',
-         ]);
+        $data = $request->validate([
+            'email' => 'required|email',
+        ]);
 
-         $user = User::where('email',$fields['email'])->first();
-         
-        if(!$user)
-        {
-            return response([
-                'message'=>'incorrect email'
-            ],401);
-        }
-        
-        $token = bcrypt($user->createToken('usertoken')->plainTextToken);
-        
+        // Delete all old code that user send before.
+        ResetCodePassword::where('email', $request->email)->delete();
+
+        // Generate random code
+        $data['code'] = mt_rand(100000, 999999);
+        // Create a new code
+        $codeData = ResetCodePassword::create($data);
+
+        // Send email to user
         $subject = "Reset Your password";
 
         $body = "We heard that you lost your password.Sorry about that!
-                You Can use the following link to reset your password :";
-        //edit the link
-        $link = "auth/reset-password/" + $token;
+                You Can use the following code to reset your password :";
+        $code = (string) $data['code'];   
+        $body =$body . $code;
+        $isMailSent = sendMail($data['email'],$subject,$body);
 
-        $body += $link;
-        sendMail($fields['email'],$subject,$body);
-
-        return response([
-            'message'=>'Success'
-        ],200);
+        if (!$isMailSent) {
+            throw new ErrorResException(
+                getResMessage("serverError", [
+                    "path" => "send verification code",
+                ])
+            );
+        }
+        return response(['message' => trans('passwords.sent')], 200);
     }
+
 }
