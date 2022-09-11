@@ -9,8 +9,8 @@ use App\Exceptions\ErrorResException;
 
 class UserController extends Controller
 {
-    //* @desc: Get a list of users
-    //* @route: /api/user
+    //* @desc:   Get a list of users
+    //* @route:  GET /api/user
     //* @access: `ADMIN`
     public function getUsers(Request $request)
     {

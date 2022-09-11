@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
-    //* @desc: Register a user
-    //* @route: /api/register
+    //* @desc:   Register a user
+    //* @route:  POST /api/register
     //* @access: PUBLIC
     public function register(Request $request)
     {

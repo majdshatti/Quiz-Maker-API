@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
 {
+    //* @desc:   Reset user's password
+    //* @route:  POST /api/resetpassword/{token}
+    //* @access: PUBLIC
     public function resetPassword(Request $request, $code)
     {
         $request->validate([
