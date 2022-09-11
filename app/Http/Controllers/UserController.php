@@ -52,8 +52,8 @@ class UserController extends Controller
         return getResMessage("edited","Password");
     }
 
-    //* @desc:Change name of the user
-    //* @route:/user/{slug}/changename
+    //* @desc:Edit user information
+    //* @route:/user/{slug}/edituser
     //* @access: PUBLIC
     public function edituser(Request $request,$slug)
     {
@@ -79,7 +79,7 @@ class UserController extends Controller
     }
 
     //* @desc:Delete user
-    //* @route:/user/{slug}/delete
+    //* @route:/user/{slug}/deleteuser
     //* @access: PUBLIC
     public function deleteUser(Request $request,$slug)
     {
@@ -94,6 +94,5 @@ class UserController extends Controller
         ->delete();
 
         return getResMessage("deleted","User");
-        //return User::destroy($id);
     }
 }
