@@ -9,7 +9,7 @@
  * @return JsonResponse
  */
 if (!function_exists("sendSuccRes")) {
-    function sendSuccRes($option, $statusCode)
+    function sendSuccRes($option, $statusCode = 200)
     {
         $response = null;
 
@@ -31,7 +31,7 @@ if (!function_exists("sendSuccRes")) {
         }
 
         // Return success response
-        return response($response, $statusCode ?? 200);
+        return response($response, $statusCode);
     }
 }
 
