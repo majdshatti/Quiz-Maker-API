@@ -5,11 +5,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\VerifyAccountController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use Illuminate\Support\Facades\App;
 
 // Reigster a user
 Route::post("/register", [AuthController::class, "register"]);
 
-Route::post("/login", [AuthController::class, "login"]);
+//Route::post("/{locale}/login", [AuthController::class, "login"]);
+
+Route::group(["middleware" => ["LanguageManager"]],function(){
+
+    Route::post("/{lang}/login", [AuthController::class, "login"]);
+});
 
 Route::post("/forgotpassword",  [ForgotPasswordController::class,"forgotPassword"]);
 
