@@ -23,6 +23,8 @@ if (!function_exists("getResMessage")) {
                 return "Unauthorized to access this route";
             case "badRequest":
                 return "Bad Request";
+            case "codeSent":
+                return "Password reset code is sent";
             case "created":
                 return ($path ? ucfirst($path) : "Record") .
                     " is created successfully";
