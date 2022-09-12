@@ -75,7 +75,7 @@ class UserController extends Controller
             'name' => $fields['newname']
          ]);
 
-        return getResMessage("edited","Name");
+         return getResMessage("edited",["path"=>"user"]);
     }
 
     //* @desc:Delete user
@@ -93,6 +93,6 @@ class UserController extends Controller
         User::where('slug',$slug)
         ->delete();
 
-        return getResMessage("deleted","User");
+        return getResMessage("deleted",["path"=>"user"]);
     }
 }

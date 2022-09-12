@@ -13,17 +13,17 @@ return [
     |
     */
 
-    'accepted' => 'The :attribute must be accepted.',
-    'accepted_if' => 'The :attribute must be accepted when :other is :value.',
-    'active_url' => 'The :attribute is not a valid URL.',
-    'after' => 'The :attribute must be a date after :date.',
-    'after_or_equal' => 'The :attribute must be a date after or equal to :date.',
-    'alpha' => 'The :attribute must only contain letters.',
-    'alpha_dash' => 'The :attribute must only contain letters, numbers, dashes and underscores.',
-    'alpha_num' => 'The :attribute must only contain letters and numbers.',
-    'array' => 'The :attribute must be an array.',
-    'before' => 'The :attribute must be a date before :date.',
-    'before_or_equal' => 'The :attribute must be a date before or equal to :date.',
+    'accepted' => 'يجب قبول هذه :attribute',
+    'accepted_if' => 'يجب قبول هذه :attribute عندما :other هو :value.',
+    'active_url' => ':attribute السمة: ليست عنوان URL صالحًا.',
+    'after' => 'يجب أن يكون تاريخ :attribute بعد تاريخ :date',
+    'after_or_equal' => 'يجب أن يكون تاريخ :attribute بعد أو مساوي تاريخ :date',
+    'alpha' => ':attribute تحتوي فقط على احرف.',
+    'alpha_dash' => ':attribute تحتوي فقط على أحرف, أرقام , - , _.',
+    'alpha_num' => ':attribute تحتوي على أرقام و أحرف فقط.',
+    'array' => ':attribute يجب أن تكون مصفوفة.',
+    'before' => 'يجب أن يكون تاريخ :attribute قبل تاريخ :date.',
+    'before_or_equal' => 'يجب أن يكون تاريخ :attribute قبل أو مساوي تاريخ :date.',
     'between' => [
         'array' => 'The :attribute must have between :min and :max items.',
         'file' => 'The :attribute must be between :min and :max kilobytes.',

@@ -17,14 +17,17 @@ class LanguageManager
      */
     public function handle($request, Closure $next)
     {
+        
+
         if(isset($request ->lang) && $request->lang == 'ar')
         {
-            app()->setLocal($request->lang);
+            app()->setlocale($request->lang);
         }
-
-        app()->setlocale('en');
+        else
+        {
+            app()->setlocale('en');
+        }
         
         return $next($request);
-
     }
 }
