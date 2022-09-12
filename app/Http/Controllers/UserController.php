@@ -30,7 +30,6 @@ class UserController extends Controller
         $user = User::where("slug", $slug)->first();
 
         if (!$user) {
-            dd(transResMessage("notExist", ["value" => $slug]));
             throw new ErrorResException(
                 transResMessage("notExist", ["value" => $slug])
             );
