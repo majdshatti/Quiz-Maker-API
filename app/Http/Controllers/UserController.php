@@ -22,6 +22,43 @@ class UserController extends Controller
         ]);
     }
 
+    //* @desc:   Get a user by slug
+    //* @route:  GET /api/user/{slug}
+    //* @access: `ADMIN`
+    public function getUserBySlug(Request $request, string $lang, string $slug)
+    {
+        $user = User::where("slug", $slug)->first();
+
+        if (!$user) {
+            dd(transResMessage("notExist", ["value" => $slug]));
+            throw new ErrorResException(
+                transResMessage("notExist", ["value" => $slug])
+            );
+        }
+
+        return sendSuccRes([
+            "data" => $user,
+        ]);
+    }
+
+    //* @desc:   Get a user by slug
+    //* @route:  GET /api/user/{slug}
+    //* @access: `USER`
+    public function getLoggedUser(Request $request)
+    {
+        $user = User::where("slug", auth()->user()?->slug)->first();
+
+        if (!$user) {
+            throw new ErrorResException(
+                transResMessage("notExist", ["value" => "user"])
+            );
+        }
+
+        return sendSuccRes([
+            "data" => $user,
+        ]);
+    }
+
     //* @desc:Change password for the user
     //* @route:/user/{slug}/changepassword
     //* @access: PUBLIC
@@ -85,7 +122,7 @@ class UserController extends Controller
             "name" => $fields["newname"],
         ]);
 
-        return getResMessage("edited", "Name");
+        return getResMessage("edited", ["path" => "user"]);
     }
 
     //* @desc:Delete user
@@ -102,8 +139,6 @@ class UserController extends Controller
             );
         }
 
-        User::where("slug", $slug)->delete();
-
-        return getResMessage("deleted", "User");
+        return getResMessage("deleted", ["path" => "user"]);
     }
 }

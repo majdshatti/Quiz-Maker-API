@@ -2,8 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-require_once "auth.php";
-require_once "user.php";
+Route::group(['prefix' => '{lang}','middleware' => 'LanguageManager'],function(){
+
+    require_once "auth.php";
+    require_once "user.php";
+    
+    });
 
 //*********************************/
 //******** 404 Not Found **********/
