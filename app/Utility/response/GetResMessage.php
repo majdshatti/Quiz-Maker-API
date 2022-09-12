@@ -43,7 +43,8 @@ if (!function_exists("getResMessage")) {
             case "logout":
                 return "Logged out";
             case "notCorrect":
-                return ($value ? ucfirst($value) : "Value") . " does not correct";
+                return ($value ? ucfirst($value) : "Value") .
+                    " does not correct";
             case "notExist":
                 return ($value ? ucfirst($value) : "Value") . " does not exist";
             case "notFound":
@@ -53,13 +54,16 @@ if (!function_exists("getResMessage")) {
                     " with the same {$field} already exists";
             case "registered":
                 return "Account registered successfully";
+            case "resetCodeExpired":
+                return ($path ? ucfirst($path) : "Code") . " is expired!";
+            case "resetSucc":
+                return "Password has been reset successfully";
             case "serverError":
                 return "Something went wrong while trying to " .
                     ($path ? strtolower($path) : "perform this operation") .
                     ", if problem persists contact us at info@company.com";
             case "verified":
                 return "Account verified successfully";
-            
             default:
                 return false;
         }

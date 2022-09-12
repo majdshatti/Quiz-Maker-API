@@ -18,11 +18,9 @@ return [
     "notFound" => "Not found",
     "notUnique" => ":path with the same :field already exists",
     "registered" => "Account registered successfully",
-    "serverError" => "Something went wrong while trying to :path" . "perform this operation"
-        . ", if problem persists contact us at info@company.com",
+    "serverError" =>
+        "Something went wrong while trying to :path" .
+        "perform this operation" .
+        ", if problem persists contact us at info@company.com",
     "verified" => "Account verified successfully",
-
-
-
-
 ];

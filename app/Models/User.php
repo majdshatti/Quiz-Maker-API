@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Log;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -14,11 +15,7 @@ class User extends Authenticatable
 
     public $table = "user";
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    // Mass assigned fields
     protected $fillable = [
         "hashed_id",
         "name",
@@ -30,19 +27,43 @@ class User extends Authenticatable
         "email_verified_at",
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+    // Hidden fields
     protected $hidden = ["id", "password", "remember_token"];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         "email_verified_at" => "datetime",
     ];
+
+    //***************************************/
+    //*************** SCOPES ****************/
+    //***************************************/
+
+    /**
+     * Sorts a collection on request params if passed, using asc/desc orders
+     *
+     * @param query   $query
+     * @param Request $request
+     */
+    public function scopeSort($query, $request)
+    {
+        sortFilter($query, $request);
+    }
+
+    /**
+     *  Filters model's data based on request params
+     *
+     * @param query $query
+     * @param array $filters Array that contains fields to be filtered
+     *
+     */
+    public function scopeFilter($query, array $filters)
+    {
+        // String filtering
+        stringFilter($query, "name", $filters["name"] ?? false);
+        stringFilter($query, "email", $filters["email"] ?? false);
+        // Number filtering
+        if (is_array($filters) && array_key_exists("rank", $filters)) {
+            numberFilter($query, $filters["rank"]);
+        }
+    }
 }

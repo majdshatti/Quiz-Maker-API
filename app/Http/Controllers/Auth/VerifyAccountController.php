@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
 
 use App\Exceptions\ErrorResException;
 use App\Models\User;
@@ -9,7 +11,7 @@ use Illuminate\Http\Request;
 class VerifyAccountController extends Controller
 {
     //* @desc: Verify a user account
-    //* @route: /api/verify/{token}
+    //* @route: POST /api/verify/{token}
     //* @access: PUBLIC
     public function verifyAccount($token)
     {
