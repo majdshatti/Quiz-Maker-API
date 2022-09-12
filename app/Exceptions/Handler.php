@@ -72,7 +72,7 @@ class Handler extends ExceptionHandler
             return errorResponse($exception, transResMessage("serverError"));
         }
 
-        // Custom Exception
+        // Custom Exceptions
         if ($exception instanceof ErrorResException) {
             Log::channel("exception")->info($exception->getMessage());
             return errorResponse($exception);
