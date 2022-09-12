@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Exceptions\ErrorResException;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -98,14 +99,14 @@ class UserController extends Controller
     }
 
     //* @desc:Edit user information
-    //* @route:/user/{slug}/edituser
-    //* @access: PUBLIC
-    public function edituser(Request $request, $slug)
+    //* @route:PUT /user/{slug}/edituser
+    //* @access: PRIVATE
+    public function editUser(Request $request,string $lang,string $slug)
     {
         $fields = $request->validate([
-            "newname" => "required|string",
-        ]);
-
+            "name" =>"required|string"
+         ]);
+         
         //Search for the user by slug.
         $user = User::where("slug", $slug)->first();
 
@@ -117,17 +118,26 @@ class UserController extends Controller
             );
         }
 
-        User::where("slug", $slug)->update([
-            "name" => $fields["newname"],
-        ]);
+        $loggedUserSlug = auth()->user()->slug;
+        //checking if the logged user slug equal to the slug sent by request
+        if($loggedUserSlug != $slug)
+        {
+            throw new ErrorResException(getResMessage("authorize", ["value" => $slug]), 404);
+        }
+
+        User::where('slug',$slug)
+        ->update([
+            'name' => $fields['name'],
+            'slug' => Str::slug($fields['name']),
+         ]);
 
         return getResMessage("edited", ["path" => "user"]);
     }
 
     //* @desc:Delete user
-    //* @route:/user/{slug}/deleteuser
-    //* @access: PUBLIC
-    public function deleteUser(Request $request, $slug)
+    //* @route:DELETE /user/{slug}/deleteuser
+    //* @access: PRIVATE
+    public function deleteUser(Request $request,string $lang,string $slug)
     {
         $user = User::where("slug", $slug)->first();
 
@@ -137,6 +147,16 @@ class UserController extends Controller
                 404
             );
         }
+
+        $loggedUserSlug = auth()->user()->slug;
+        //checking if the logged user slug equal to the slug sent by request
+        if($loggedUserSlug != $slug)
+        {
+            throw new ErrorResException(getResMessage("authorize", ["value" => $slug]), 404);
+        }
+        
+        User::where('slug',$slug)
+        ->delete();
 
         return getResMessage("deleted", ["path" => "user"]);
     }
