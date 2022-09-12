@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Exceptions\ErrorResException;
+use App\Http\Requests\User\UserStoreRequest;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,17 +13,13 @@ use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
-    //* @desc: Register a user
-    //* @route: /api/register
+    //* @desc:   Register a user
+    //* @route:  POST /api/register
     //* @access: PUBLIC
-    public function register(Request $request)
+    public function register(UserStoreRequest $request)
     {
-        // Validate Body Request
-        $body = $request->validate([
-            "name" => "required|string|max:20|min:2|unique:user,name",
-            "email" => "required|string|unique:user,email|email",
-            "password" => "required|string|min:6|confirmed",
-        ]);
+        // Get validated Body Request
+        $body = $request->validated();
 
         // Hash password
         $body["password"] = bcrypt($body["password"]);
@@ -56,7 +53,7 @@ class AuthController extends Controller
         return sendSuccRes(
             [
                 "data" => $user,
-                "keyMessage" => "registered",
+                "message" => transResMessage("created", ["path" => "user"]),
             ],
             201
         );

@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 use Throwable;
 
@@ -64,8 +66,21 @@ class Handler extends ExceptionHandler
             return errorResponse($exception);
         }
 
-        // Custom Exception
+        // Query Exception
+        if ($exception instanceof QueryException) {
+            Log::channel("exception")->info($exception->getMessage());
+            return errorResponse($exception, transResMessage("serverError"));
+        }
+
+        // Custom Exceptions
         if ($exception instanceof ErrorResException) {
+            Log::channel("exception")->info($exception->getMessage());
+            return errorResponse($exception);
+        }
+
+        // Unhandled exceptions
+        if ($exception) {
+            Log::channel("exception")->info($exception->getMessage());
             return errorResponse($exception);
         }
 

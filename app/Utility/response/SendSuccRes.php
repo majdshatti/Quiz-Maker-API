@@ -9,29 +9,27 @@
  * @return JsonResponse
  */
 if (!function_exists("sendSuccRes")) {
-    function sendSuccRes($option, $statusCode)
+    function sendSuccRes($option, $statusCode = 200)
     {
         $response = null;
-
-        // Set message
-        if (isset($option["keyMessage"])) {
-            $response["message"] = getResMessage($option["keyMessage"]) ?? "";
-        } elseif (isset($option->message)) {
-            $response["message"] = $option["keyMessage"];
-        }
+        $response["success"] = true;
 
         // Set data
         if (isset($option["data"])) {
             $response["data"] = $option["data"];
         }
 
+        // Set message
+        if (isset($option["message"])) {
+            $response["message"] = $option["message"];
+        }
+
         // Set token
         if (isset($option["token"])) {
             $response["token"] = $option["token"];
         }
-
         // Return success response
-        return response($response, $statusCode ?? 200);
+        return response($response, $statusCode);
     }
 }
 
