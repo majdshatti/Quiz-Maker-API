@@ -28,7 +28,7 @@ class AuthController extends Controller
         $default = [
             "remember_token" => sprintf("%06d", mt_rand(1, 999999)),
             "slug" => Str::slug($body["name"]),
-            "hashed_id" => Str::orderedUuid()->getHex(),
+            "uuid" => Str::orderedUuid()->getHex(),
         ];
 
         // Send email to user

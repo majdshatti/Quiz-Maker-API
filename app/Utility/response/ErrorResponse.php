@@ -13,8 +13,6 @@ if (!function_exists("errorResponse")) {
         // Check for a status code in the exception
         if (isset($exception->status)) {
             $statusCode = $exception->status;
-        } elseif ($exception->getCode()) {
-            $statusCode = $exception->getCode();
         } else {
             $statusCode = 500;
         }
@@ -30,7 +28,7 @@ if (!function_exists("errorResponse")) {
         }
 
         // Return json response
-        return response()->json($response, $statusCode);
+        return response($response, $statusCode);
     }
 }
 

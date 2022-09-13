@@ -17,7 +17,7 @@ class User extends Authenticatable
 
     // Mass assigned fields
     protected $fillable = [
-        "hashed_id",
+        "uuid",
         "name",
         "slug",
         "email",
