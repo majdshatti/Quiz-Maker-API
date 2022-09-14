@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "uuid": "974412365c3b404b9dc1675d8124c4dd",
+        "slug": "laravel",
+        "created_at": "2022-09-14T20:09:51.000000Z",
+        "updated_at": "2022-09-14T20:09:51.000000Z"
+    },
+    {
+        "id": 2,
+        "uuid": "97441310ea3e424195665bc6a3583b56",
+        "slug": "software-development",
+        "created_at": "2022-09-14T20:12:14.000000Z",
+        "updated_at": "2022-09-14T20:12:14.000000Z"
+    },
+    {
+        "id": 4,
+        "uuid": "974414a1fffe4d2db66040af9a1b4d1a",
+        "slug": "object-oriented-programming",
+        "created_at": "2022-09-14T20:16:37.000000Z",
+        "updated_at": "2022-09-14T20:16:37.000000Z"
+    },
+    {
+        "id": 5,
+        "uuid": "97441649d07548519bcff968d34bb125",
+        "slug": "amazon-web-services",
+        "created_at": "2022-09-14T20:21:15.000000Z",
+        "updated_at": "2022-09-14T20:21:15.000000Z"
+    }
+]
