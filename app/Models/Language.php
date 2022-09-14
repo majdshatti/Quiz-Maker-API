@@ -12,4 +12,10 @@ class Language extends Model
     public $table = "language";
     protected $fillable = ["uuid", "name", "code"];
     protected $hidden = ["id"];
+
+    // Subject Translation Relation
+    public function subjectTranslations()
+    {
+        return $this->hasMany(SubjectTranslation::class);
+    }
 }
