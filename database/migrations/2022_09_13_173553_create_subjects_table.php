@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Str;
 
 return new class extends Migration {
     /**
@@ -13,16 +12,10 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create("user", function (Blueprint $table) {
+        Schema::create("subject", function (Blueprint $table) {
             $table->id();
             $table->uuid("uuid");
-            $table->string("name");
             $table->string("slug");
-            $table->string("email")->unique();
-            $table->timestamp("email_verified_at")->nullable();
-            $table->string("password");
-            $table->integer("rank")->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists("user");
+        Schema::dropIfExists("subject");
     }
 };

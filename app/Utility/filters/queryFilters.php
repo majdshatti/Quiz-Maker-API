@@ -95,4 +95,65 @@ if (!function_exists("sortFilter")) {
     }
 }
 
+/**
+ *
+ *
+ * @param query $query
+ * @param
+ *
+ * @return
+ */
+if (!function_exists("relationFilter")) {
+    function relationFilter($query, $relation, $col, $urlParam)
+    {
+        $query->when(
+            $urlParam,
+            fn($query, $value) => $query->whereHas(
+                $relation,
+                fn($query) => $query->where($col, $value)
+            )
+        );
+    }
+}
+
+/**
+ *
+ *
+ * @param query $query
+ * @param
+ *
+ * @return
+ */
+if (!function_exists("searchFilter")) {
+    function searchFilter($query, $relation, array $col, $urlParam)
+    {
+        for ($i = 0; $i < count($col); $i++) {
+            if ($i == 0) {
+                $query->when(
+                    $urlParam ?? false,
+                    fn($query, $value) => $query->whereHas(
+                        $relation,
+                        fn($query) => $query->where(
+                            $col[$i],
+                            "like",
+                            "%" . $value . "%"
+                        )
+                    )
+                );
+            } else {
+                $query->when(
+                    $urlParam ?? false,
+                    fn($query, $value) => $query->orWhereHas(
+                        $relation,
+                        fn($query) => $query->where(
+                            $col[$i],
+                            "like",
+                            "%" . $value . "%"
+                        )
+                    )
+                );
+            }
+        }
+    }
+}
 ?>
