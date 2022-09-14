@@ -62,8 +62,6 @@ class User extends Authenticatable
         stringFilter($query, "name", $filters["name"] ?? false);
         stringFilter($query, "email", $filters["email"] ?? false);
         // Number filtering
-        if (is_array($filters) && array_key_exists("rank", $filters)) {
-            numberFilter($query, $filters["rank"]);
-        }
+        numberFilter($query, $filters["rank"] ?? false);
     }
 }
