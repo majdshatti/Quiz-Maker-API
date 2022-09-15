@@ -25,7 +25,6 @@ class UserFactory extends Factory
             "slug" => Str::slug($name),
             "email" => fake()->safeEmail(),
             "email_verified_at" => now(),
-            "password" => bcrypt("vip123456"),
             "remember_token" => Str::random(10),
         ];
     }
