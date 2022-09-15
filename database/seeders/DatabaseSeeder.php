@@ -5,9 +5,12 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Language;
+use App\Models\Quiz;
+use App\Models\QuizTranslation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,13 +25,13 @@ class DatabaseSeeder extends Seeder
         User::create([
             "uuid" => Str::orderedUuid()->getHex(),
             "name" => "Blackpearl",
-            "slug" => "blackpeal",
+            "slug" => "blackpearl",
             "email" => "blackpearl@gmail.com",
             "password" => "vip123456",
         ]);
         // Users
         User::factory(10)->create([
-            "password" => "vip123456",
+            "password" => bcrypt("vip123456"),
         ]);
 
         // Default languages
@@ -48,5 +51,9 @@ class DatabaseSeeder extends Seeder
                 "updated_at" => date("Y-m-d H:i:s"),
             ],
         ]);
+
+        Quiz::factory(10)->create();
+        
+        QuizTranslation::factory(10)->create();
     }
 }
