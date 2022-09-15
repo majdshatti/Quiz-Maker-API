@@ -5,6 +5,9 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Language;
+
+use App\Models\Quiz;
+use App\Models\QuizTranslation;
 use App\Models\Subject;
 use App\Models\SubjectTranslation;
 use App\Models\User;
@@ -12,7 +15,6 @@ use Faker\Factory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
-use Mockery\Matcher\Subset;
 
 class DatabaseSeeder extends Seeder
 {
@@ -62,5 +64,9 @@ class DatabaseSeeder extends Seeder
                 "updated_at" => date("Y-m-d H:i:s"),
             ],
         ]);
+
+        Quiz::factory(10)->create();
+        
+        QuizTranslation::factory(10)->create();
     }
 }
