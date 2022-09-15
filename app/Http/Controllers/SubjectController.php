@@ -6,6 +6,7 @@ use App\Exceptions\ErrorResException;
 use App\Http\Requests\Subject\SubjectEditRequest;
 use App\Http\Requests\Subject\SubjectRequest;
 use App\Models\Language;
+use App\Models\Quiz;
 use App\Models\Subject;
 use App\Models\SubjectTranslation;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class SubjectController extends Controller
     //* @access: `USER`
     public function getSubjects(Request $request)
     {
+        dd(json_encode(Quiz::all()));
         return sendSuccRes([
             "data" => Subject::sort($request)
                 ->filter(request(["slug", "name", "search"]))
@@ -88,6 +90,13 @@ class SubjectController extends Controller
         $translations = $subject
             ->translations()
             ->saveMany($subjectTranslations);
+
+        // Attach all quizzes
+        $quizzes = Quiz::all();
+
+        foreach ($quizzes as $quiz) {
+            $subject->quizzes()->attach($quiz->id);
+        }
 
         // Fallback and delete subject
         if (!$translations) {

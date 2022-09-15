@@ -27,6 +27,12 @@ class Subject extends Model
         return $this->hasMany(SubjectTranslation::class);
     }
 
+    // Subject Quiz relation
+    public function quizzes()
+    {
+        return $this->belongsToMany(Quiz::class, "quiz_subject");
+    }
+
     /**
      * Sorts a collection on request params if passed, using asc/desc orders
      *
