@@ -12,19 +12,21 @@ class Quiz extends Model
     public $table = "quiz";
 
     // Mass assigned fields
-    protected $fillable = [
-        "uuid",
-        "slug",
-    ];
+    protected $fillable = ["uuid", "slug"];
 
     // Hidden fields
     protected $hidden = ["id"];
+
+    // Quiz Subject relation
+    public function subjects()
+    {
+        return $this->belongsToMany(Subject::class, "quiz_subject");
+    }
 
     //***************************************/
     //*************** SCOPES ****************/
     //***************************************/
 
-    
     /**
      * Sorts a collection on request params if passed, using asc/desc orders
      *
