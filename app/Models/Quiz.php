@@ -19,6 +19,15 @@ class Quiz extends Model
 
     // Hidden fields
     protected $hidden = ["id"];
+    
+    // Get data including relations
+    protected $with = ["translations"];
+
+    // Quiz Translation Relation
+    public function translations()
+    {
+        return $this->hasMany(QuizTranslation::class);
+    }
 
     //***************************************/
     //*************** SCOPES ****************/
@@ -47,5 +56,19 @@ class Quiz extends Model
     {
         // String filtering
         stringFilter($query, "slug", $filters["slug"] ?? false);
+        // Relation filtering
+        relationFilter(
+            $query,
+            "translations",
+            "name",
+            $filters["name"] ?? false
+        );
+        // Search Filter
+        searchFilter(
+            $query,
+            "translations",
+            ["name", "description", "slug"],
+            $filters["search"] ?? false
+        );
     }
 }
