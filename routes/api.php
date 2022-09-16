@@ -16,6 +16,7 @@ Route::group(
         require_once "auth.php";
         require_once "user.php";
         require_once "subject.php";
+        require_once "quiz.php";
     }
 );
 
