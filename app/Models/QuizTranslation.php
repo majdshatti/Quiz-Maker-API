@@ -22,4 +22,16 @@ class QuizTranslation extends Model
 
     // Hidden fields
     protected $hidden = ["id"];
+
+    // Subject Relation
+    public function subject()
+    {
+        return $this->belongsTo(Quiz::class);
+    }
+
+    // Language Relation
+    public function language()
+    {
+        return $this->belongsTo(Language::class);
+    }
 }
