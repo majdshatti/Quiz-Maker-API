@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->uuid("uuid");
             $table->string("name");
-            $table->text('description');
+            $table->string('description');
             $table->foreignId('quiz_id')->constrained('quiz')->onDelete('cascade');
             $table->foreignId('language_id')->constrained('language')->onDelete('cascade');
             $table->timestamps();
