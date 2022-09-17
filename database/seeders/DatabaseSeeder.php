@@ -98,20 +98,32 @@ class DatabaseSeeder extends Seeder
         //***********************/
         //******** QUIZ *********/
         //***********************/
-        Quiz::insert([
-            [
-                "uuid" => Str::orderedUuid()->getHex(),
-                "slug" => "beginner",
-            ],
-            [
-                "uuid" => Str::orderedUuid()->getHex(),
-                "slug" => "intermediate",
-            ],
-            [
-                "uuid" => Str::orderedUuid()->getHex(),
-                "slug" => "advanced",
-            ],
-        ]);
+
+        $quizJson = File::get("database/data/quiz.json");
+        $quizTransJson = File::get("database/data/quizTranslation.json");
+
+        $quizzes = json_decode($quizJson);
+        $quizzesTrans = json_decode($quizTransJson);
+
+        foreach ($quizzes as $key => $value) {
+            Quiz::create([
+                "id" => $value->id,
+                "slug" => $value->slug,
+                "uuid" => $value->uuid,
+            ]);
+        }
+
+        foreach ($quizzesTrans as $key => $value) {
+            QuizTranslation::create([
+                "id" => $value->id,
+                "uuid" => $value->uuid,
+                "language_id" => $value->language_id,
+                "quiz_id" => $value->quiz_id,
+                "name" => $value->name,
+                "description" => $value->description,
+            ]);
+        }
+        
 
         //*******************************/
         //******** SUBJECT QUIZ *********/
