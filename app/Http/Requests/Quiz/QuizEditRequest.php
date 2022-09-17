@@ -29,10 +29,11 @@ class QuizEditRequest extends FormRequest
 
         foreach ($langs as $lang) {
             $rules = array_merge($rules, [
-                $lang["code"] . ".name" => "string",
+                $lang["code"] . ".name" => "string|unique:quiz_translation,name",
                 $lang["code"] . ".description" => "string|min:10|max:400",
             ]);
         }
+
         return $rules;
     }
 }
