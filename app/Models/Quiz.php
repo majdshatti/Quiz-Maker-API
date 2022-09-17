@@ -12,11 +12,16 @@ class Quiz extends Model
     public $table = "quiz";
 
     // Mass assigned fields
-    protected $fillable = ["uuid", "slug"];
+    protected $fillable = [
+        "uuid",
+        "slug",
+        "created_at",
+        "updated_at"
+    ];
 
     // Hidden fields
     protected $hidden = ["id"];
-    
+
     // Get data including relations
     protected $with = ["translations"];
 
