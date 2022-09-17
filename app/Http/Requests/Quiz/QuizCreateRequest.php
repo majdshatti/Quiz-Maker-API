@@ -29,7 +29,7 @@ class QuizCreateRequest extends FormRequest
 
         foreach ($langs as $lang) {
             $rules = array_merge($rules, [
-                $lang["code"] . ".name" => "required|string",
+                $lang["code"] . ".name" => "required|string|unique:quiz_translation,name",
                 $lang["code"] . ".description" => "required|string|min:10|max:400",
             ]);
         }
