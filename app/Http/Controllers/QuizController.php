@@ -119,7 +119,7 @@ class QuizController extends Controller
     //* @route:  PUT /api/quiz/{slug}
     //* @access: `ADMIN`
     public function editQuiz(
-        QuizCreateRequest $request,
+        QuizEditRequest $request,
         $lang,
         string $slug
     ) {
@@ -165,6 +165,8 @@ class QuizController extends Controller
 
         $quiz->save();
 
+        $quiz->translations()->saveMany($quiz->translations);
+        
         return sendSuccRes(["data" => $quiz]);
     }
 
