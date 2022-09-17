@@ -18,13 +18,15 @@ class QuizTranslation extends Model
         "description",
         "quiz_id",
         "language_id",
+        "created_at",
+        "updated_at",
     ];
 
     // Hidden fields
     protected $hidden = ["id"];
 
-    // Subject Relation
-    public function subject()
+    // Quiz Relation
+    public function quiz()
     {
         return $this->belongsTo(Quiz::class);
     }
