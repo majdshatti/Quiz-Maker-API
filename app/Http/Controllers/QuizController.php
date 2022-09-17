@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Language;
 use App\Models\Quiz;
+use App\Models\Subject;
 use App\Models\QuizTranslation;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -19,6 +20,7 @@ class QuizController extends Controller
     //* @access: `USER`
     public function getQuiz(Request $request)
     {
+
         return sendSuccRes([
             "data" => Quiz::sort($request)
                 ->filter(request(["slug", "name", "search"]))
@@ -88,6 +90,13 @@ class QuizController extends Controller
             ->translations()
             ->saveMany($quizTranslations);
 
+        //Attach all subjects
+        $subjects = Subject::all();
+
+        foreach ($subjects as $subject) {
+            $quiz->subjects()->attach($subject->id);
+        }
+
         // Fallback and delete quiz
         if (!$translations) {
             $quiz->delete();
@@ -124,7 +133,7 @@ class QuizController extends Controller
                 404
             );
         }
-        
+
         // Adjust body if `en name` exists in the request body
         if (
             array_key_exists("en", $body) &&
