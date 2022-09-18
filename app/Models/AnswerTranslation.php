@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class QuizTranslation extends Model
+class AnswerTranslation extends Model
 {
     use HasFactory;
 
-    public $table = "quiz_translation";
+    public $table = "answer_translation";
 
     // Mass assigned fields
     protected $fillable = [
         "uuid",
-        "name",
-        "description",
-        "quiz_id",
+        "paragraph",
+        "answer_id",
         "language_id",
         "created_at",
         "updated_at",
@@ -25,10 +24,10 @@ class QuizTranslation extends Model
     // Hidden fields
     protected $hidden = ["id"];
 
-    // Quiz Relation
-    public function quiz()
+    // Answer Relation
+    public function answer()
     {
-        return $this->belongsTo(Quiz::class);
+        return $this->belongsTo(Answer::class);
     }
 
     // Language Relation
