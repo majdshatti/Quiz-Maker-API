@@ -53,10 +53,5 @@
         "id": 11,
         "subject_id": 5,
         "quiz_id": 2
-    },
-    {
-        "id": 12,
-        "subject_id": 5,
-        "quiz_id": 3
     }
 ]
