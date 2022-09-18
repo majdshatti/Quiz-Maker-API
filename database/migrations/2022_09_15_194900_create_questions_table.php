@@ -15,6 +15,10 @@ return new class extends Migration {
         Schema::create("question", function (Blueprint $table) {
             $table->id();
             $table->uuid("uuid");
+            $table
+                ->foreignId("quiz_subject_id")
+                ->constrained("quiz_subject")
+                ->onDelete("cascade");
             $table->timestamps();
         });
     }
