@@ -9,15 +9,15 @@ Route::group(["middleware" => ["auth:sanctum"]], function () {
         //****** USER PRIVATE ROUTES ******/
         //*********************************/
         Route::get("/", [QuestionController::class, "getQuestions"]);
-        Route::get("/{slug}", [QuestionController::class, "getQuestionBySlug"]);
+        Route::get("/{uuid}", [QuestionController::class, "getQuestionByUuid"]);
 
         Route::group(["middleware" => ["authorize"]], function () {
             //*********************************/
             //***** ADMIN PRIVATE ROUTES ******/
             //*********************************/
             Route::post("/", [QuestionController::class, "createQuestion"]);
-            Route::put("/{slug}", [QuestionController::class, "editQuestion"]);
-            Route::delete("/{slug}", [
+            Route::put("/{uuid}", [QuestionController::class, "editQuestion"]);
+            Route::delete("/{uuid}", [
                 QuestionController::class,
                 "deleteQuestion",
             ]);
