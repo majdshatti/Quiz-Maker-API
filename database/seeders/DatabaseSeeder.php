@@ -5,7 +5,8 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Language;
-
+use App\Models\Question;
+use App\Models\QuestionTranslation;
 use App\Models\Quiz;
 use App\Models\QuizTranslation;
 use App\Models\Subject;
@@ -123,7 +124,6 @@ class DatabaseSeeder extends Seeder
                 "description" => $value->description,
             ]);
         }
-        
 
         //*******************************/
         //******** SUBJECT QUIZ *********/
@@ -141,8 +141,34 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // Quiz::factory(10)->create();
+        //*******************************/
+        //********** QUESTION ***********/
+        //*******************************/
 
-        // QuizTranslation::factory(10)->create();
+        $questionJson = File::get("database/data/question.json");
+        $questionTransJson = File::get(
+            "database/data/questionTranslation.json"
+        );
+
+        $questions = json_decode($questionJson);
+        $questionsTrans = json_decode($questionTransJson);
+
+        foreach ($questions as $key => $value) {
+            Question::create([
+                "id" => $value->id,
+                "quiz_subject_id" => $value->quiz_subject_id,
+                "uuid" => $value->uuid,
+            ]);
+        }
+
+        foreach ($questionsTrans as $key => $value) {
+            QuestionTranslation::create([
+                "id" => $value->id,
+                "uuid" => $value->uuid,
+                "language_id" => $value->language_id,
+                "question_id" => $value->question_id,
+                "paragraph" => $value->paragraph,
+            ]);
+        }
     }
 }
