@@ -21,10 +21,9 @@ class SubjectController extends Controller
     //* @access: `USER`
     public function getSubjects(Request $request)
     {
-        dd(json_encode(Quiz::all()));
         return sendSuccRes([
             "data" => Subject::sort($request)
-                ->filter(request(["slug", "name", "search"]))
+                ->filter(request(["slug", "name", "search", "translations"]))
                 ->simplePaginate(),
         ]);
     }
@@ -166,6 +165,7 @@ class SubjectController extends Controller
         $subject["slug"] = $body["en"]["slug"] ?? $subject["slug"];
 
         $subject->save();
+        $subject->translations()->saveMany($subject->translations);
 
         return sendSuccRes(["data" => $subject]);
     }
@@ -173,11 +173,8 @@ class SubjectController extends Controller
     //* @desc:   Delete a subject with its translations
     //* @route:  DELETE /api/subject/{slug}
     //* @access: `ADMIN`
-    public function deleteSubject(
-        SubjectEditRequest $request,
-        $lang,
-        string $slug
-    ) {
+    public function deleteSubject(Request $request, $lang, string $slug)
+    {
         $subject = Subject::where("slug", $slug)->first();
 
         if (!$subject) {

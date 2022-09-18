@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Subject;
+namespace App\Http\Requests\Question;
 
 use App\Models\Language;
 use Illuminate\Foundation\Http\FormRequest;
 
-class SubjectRequest extends FormRequest
+class QuestionStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,14 +26,15 @@ class SubjectRequest extends FormRequest
     {
         $langs = Language::all();
 
-        $rules = [];
+        $rules = [
+            "subjectId" => "required|exists:subject,uuid",
+            "quizId" => "required|exists:quiz,uuid",
+        ];
 
         foreach ($langs as $lang) {
             $rules = array_merge($rules, [
                 $lang["code"] .
-                ".name" => "required|string|unique:subject_translation,name",
-                $lang["code"] .
-                ".description" => "required|string|min:10|max:400",
+                ".paragraph" => "required|string|unique:question_translation,paragraph",
             ]);
         }
         return $rules;
