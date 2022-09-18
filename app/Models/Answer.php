@@ -15,6 +15,7 @@ class Answer extends Model
     protected $fillable = [
         "uuid",
         "question_id",
+        "isCorrect",
         "created_at",
         "updated_at",
     ];
@@ -32,5 +33,42 @@ class Answer extends Model
         return $this->belongsTo(Question::class);
     }
 
+     /**
+     * Sorts a collection on request params if passed, using asc/desc orders
+     *
+     * @param query   $query
+     * @param Request $request
+     */
+    public function scopeSort($query, $request)
+    {
+        sortFilter($query, $request);
+    }
+
+    /**
+     *  Filters model's data based on request params
+     *
+     * @param query $query
+     * @param array $filters Array that contains fields to be filtered
+     *
+     */
+    public function scopeFilter($query, array $filters)
+    {
+        // String filtering
+        stringFilter($query, "uuid", $filters["answerId"] ?? false);
+        // Relation filtering
+        relationFilter(
+            $query,
+            "translations",
+            "uuid",
+            $filters["questionId"] ?? false
+        );
+        // Search Filter
+        searchFilter(
+            $query,
+            "translations",
+            ["name", "paragraph"],
+            $filters["search"] ?? false
+        );
+    }
     
 }
