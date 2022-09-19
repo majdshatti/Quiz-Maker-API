@@ -72,109 +72,41 @@ class DatabaseSeeder extends Seeder
         //******* SUBJECT *******/
         //***********************/
         
-        //$subjectJson = File::get("database/data/subject.json");
-        $subjectTransJson = File::get("database/data/subjectTranslation.json");
-
-        //$subjects = json_decode($subjectJson);
-        $subjectsTrans = json_decode($subjectTransJson);
-
-        /*
-        foreach ($subjects as $key => $value) {
-            Subject::create([
-                "id" => $value->id,
-                "slug" => $value->slug,
-                "uuid" => $value->uuid,
-            ]);
-        }*/
 
         jsonSeeder("subject","database/data/subject.json");
 
-
-
-        foreach ($subjectsTrans as $key => $value) {
-            SubjectTranslation::create([
-                "id" => $value->id,
-                "uuid" => $value->uuid,
-                "language_id" => $value->language_id,
-                "subject_id" => $value->subject_id,
-                "name" => $value->name,
-                "description" => $value->description,
-            ]);
-        }
+        jsonSeeder("subject_translation","database/data/subjectTranslation.json");
 
         //***********************/
         //******** QUIZ *********/
         //***********************/
 
-        $quizJson = File::get("database/data/quiz.json");
-        $quizTransJson = File::get("database/data/quizTranslation.json");
+        jsonSeeder("quiz","database/data/quiz.json");
 
-        $quizzes = json_decode($quizJson);
-        $quizzesTrans = json_decode($quizTransJson);
-
-        foreach ($quizzes as $key => $value) {
-            Quiz::create([
-                "id" => $value->id,
-                "slug" => $value->slug,
-                "uuid" => $value->uuid,
-            ]);
-        }
-
-        foreach ($quizzesTrans as $key => $value) {
-            QuizTranslation::create([
-                "id" => $value->id,
-                "uuid" => $value->uuid,
-                "language_id" => $value->language_id,
-                "quiz_id" => $value->quiz_id,
-                "name" => $value->name,
-                "description" => $value->description,
-            ]);
-        }
+        jsonSeeder("quiz_translation","database/data/quizTranslation.json");
 
         //*******************************/
         //******** SUBJECT QUIZ *********/
         //*******************************/
 
-        $subjectQuizJson = File::get("database/data/quizSubject.json");
+        jsonSeeder("quiz_subject","database/data/quizSubject.json");
 
-        $subjectQuiz = json_decode($subjectQuizJson);
-
-        foreach ($subjectQuiz as $key => $value) {
-            DB::table("quiz_subject")->insert([
-                "id" => $value->id,
-                "quiz_id" => $value->quiz_id,
-                "subject_id" => $value->subject_id,
-            ]);
-        }
 
         //*******************************/
         //********** QUESTION ***********/
         //*******************************/
 
-        $questionJson = File::get("database/data/question.json");
-        $questionTransJson = File::get(
-            "database/data/questionTranslation.json"
-        );
+        jsonSeeder("question","database/data/question.json");
 
-        $questions = json_decode($questionJson);
-        $questionsTrans = json_decode($questionTransJson);
+        jsonSeeder("question_translation","database/data/questionTranslation.json");
 
-        foreach ($questions as $key => $value) {
-            Question::create([
-                "id" => $value->id,
-                "quiz_subject_id" => $value->quiz_subject_id,
-                "uuid" => $value->uuid,
-            ]);
-        }
+        //*******************************/
+        //********** Answer ***********/
+        //*******************************/
 
-        foreach ($questionsTrans as $key => $value) {
-            QuestionTranslation::create([
-                "id" => $value->id,
-                "uuid" => $value->uuid,
-                "language_id" => $value->language_id,
-                "question_id" => $value->question_id,
-                "paragraph" => $value->paragraph,
-            ]);
-        }
+        //jsonSeeder("answer","database/data/answer.json");
+
+        //jsonSeeder("answer_translation","database/data/answerTranslation.json");
+
     }
 }

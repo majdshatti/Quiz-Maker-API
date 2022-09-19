@@ -23,11 +23,11 @@ if (!function_exists("jsonSeeder")) {
         $jsonFile = File::get($path);
         $jsonDecoded = json_decode($jsonFile);
 
-        print_r($jsonDecoded);
         foreach ($jsonDecoded as $key => $value) {
-            print_r($value);
-            //DB::table($tableName)->insert($value);
-            DB::table($tableName)->save($value);
+            $newValue = (array) $value;
+            $newValue["created_at"] = date("Y-m-d H:i:s");
+            $newValue["updated_at"] = date("Y-m-d H:i:s");
+            DB::table($tableName)->insert($newValue);
         }
         
     }
