@@ -71,19 +71,25 @@ class DatabaseSeeder extends Seeder
         //***********************/
         //******* SUBJECT *******/
         //***********************/
-        $subjectJson = File::get("database/data/subject.json");
+        
+        //$subjectJson = File::get("database/data/subject.json");
         $subjectTransJson = File::get("database/data/subjectTranslation.json");
 
-        $subjects = json_decode($subjectJson);
+        //$subjects = json_decode($subjectJson);
         $subjectsTrans = json_decode($subjectTransJson);
 
+        /*
         foreach ($subjects as $key => $value) {
             Subject::create([
                 "id" => $value->id,
                 "slug" => $value->slug,
                 "uuid" => $value->uuid,
             ]);
-        }
+        }*/
+
+        jsonSeeder("subject","database/data/subject.json");
+
+
 
         foreach ($subjectsTrans as $key => $value) {
             SubjectTranslation::create([
