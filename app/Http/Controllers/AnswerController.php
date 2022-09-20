@@ -43,55 +43,42 @@ class AnswerController extends Controller
 
         // Retrieve all languages and loop throw them to get language_id
         $languages = Language::all();
-/*
-        foreach ($languages as $lang) {
-            array_push(
-                $answerTranslations,
-                new AnswerTranslation([
-                    "uuid" => Str::orderedUuid()->getHex(),
-                    "language_id" => $lang["id"],
-                    "answer_id" => $body["answerId"],
-                    "paragraph" => $body[$lang["code"]]["paragraph"],
-                ])
-            );
-        }*/
-
 
         //Get all the answers that have the same question_id
-        //$questionAnswers = Answer::where("question_id", $body["questionId"]);
-        $question = Question::where("uuid", $body["questionId"]);
-        $questionAnswers = $question->answers();
+        $question = Question::where("uuid", $body["questionId"])->first();
+        $questionAnswers = $question->answers;
+
         //check if there is no more than 4 answers for each question
-        $numberOfAnswers = count(get_object_vars($questionAnswers));
-        //dd($numberOfAnswers);
-        if ($numberOfAnswers > 4) {
+        $numberOfAnswers = count($questionAnswers);
+
+        if ($numberOfAnswers > 3) {
             throw new ErrorResException(transResMessage("fourAnswersExisted"));
         }
 
         //check if there is one correct answer
-        if ($numberOfAnswers > 1) {
+        if ($numberOfAnswers >= 1) {
             $answerCorrect = false;
-            $countCorrect = 0;
-            foreach ($questionAnswers as $questionAnswer) {
-                if ($questionAnswer["isCorrect"] == true) {
+            foreach ($questionAnswers as $key => $questionAnswer) {
+                if ($questionAnswer->isCorrect == true) {
                     $answerCorrect = true;
-                    $countCorrect++;
                 }
             }
             //if all the answers are false
             if ($answerCorrect == false && !$body["isCorrect"] && $numberOfAnswers > 2) {
                 throw new ErrorResException(transResMessage("falseAnswers"));
             }
+            
             //No more than one correct answer
-            if($answerCorrect ==  true && $body["isCorrect"])
+            if($answerCorrect && $body["isCorrect"])
             {
                 throw new ErrorResException(transResMessage("moreThanOneAnswerTrue"));
             }
         }
+
         // Create answer
         $answer = Answer::create([
             "uuid" => Str::orderedUuid()->getHex(),
-            "question_id" => $body["questionId"],
+            "question_id" => $question->id,
             "isCorrect" => $body["isCorrect"],
         ]);
 
@@ -187,7 +174,7 @@ class AnswerController extends Controller
         $lang,
         string $uuid
     ) {
-        $answer = Answer::where("slug", $uuid)->first();
+        $answer = Answer::where("uuid", $uuid)->first();
 
         if (!$answer) {
             throw new ErrorResException(
