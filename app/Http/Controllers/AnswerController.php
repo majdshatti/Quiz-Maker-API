@@ -10,6 +10,7 @@ use App\Http\Requests\Answer\AnswerEditRequest;
 use Illuminate\Support\Str;
 use App\Models\Language;
 use App\Models\AnswerTranslation;
+use App\Models\Question;
 
 class AnswerController extends Controller
 {
@@ -32,7 +33,7 @@ class AnswerController extends Controller
     }
 
 
-    public function createQuiz(AnswerCreateRequest $request)
+    public function addAnswer(AnswerCreateRequest $request)
     {
         // Validated request body
         $body = $request->validated();
@@ -42,7 +43,7 @@ class AnswerController extends Controller
 
         // Retrieve all languages and loop throw them to get language_id
         $languages = Language::all();
-
+/*
         foreach ($languages as $lang) {
             array_push(
                 $answerTranslations,
@@ -53,19 +54,40 @@ class AnswerController extends Controller
                     "paragraph" => $body[$lang["code"]]["paragraph"],
                 ])
             );
-        }
+        }*/
+
 
         //Get all the answers that have the same question_id
-        $questionAnswers = Answer::where("question_id", $body["questionId"]);
-
+        //$questionAnswers = Answer::where("question_id", $body["questionId"]);
+        $question = Question::where("uuid", $body["questionId"]);
+        $questionAnswers = $question->answers();
         //check if there is no more than 4 answers for each question
-        $numberOfAnswers = count($questionAnswers);
+        $numberOfAnswers = count(get_object_vars($questionAnswers));
+        //dd($numberOfAnswers);
+        if ($numberOfAnswers > 4) {
+            throw new ErrorResException(transResMessage("fourAnswersExisted"));
+        }
 
         //check if there is one correct answer
-
-        //check the is correct that comes from the body
-
-
+        if ($numberOfAnswers > 1) {
+            $answerCorrect = false;
+            $countCorrect = 0;
+            foreach ($questionAnswers as $questionAnswer) {
+                if ($questionAnswer["isCorrect"] == true) {
+                    $answerCorrect = true;
+                    $countCorrect++;
+                }
+            }
+            //if all the answers are false
+            if ($answerCorrect == false && !$body["isCorrect"] && $numberOfAnswers > 2) {
+                throw new ErrorResException(transResMessage("falseAnswers"));
+            }
+            //No more than one correct answer
+            if($answerCorrect ==  true && $body["isCorrect"])
+            {
+                throw new ErrorResException(transResMessage("moreThanOneAnswerTrue"));
+            }
+        }
         // Create answer
         $answer = Answer::create([
             "uuid" => Str::orderedUuid()->getHex(),
@@ -73,11 +95,24 @@ class AnswerController extends Controller
             "isCorrect" => $body["isCorrect"],
         ]);
 
+
+        foreach ($languages as $lang) {
+            array_push(
+                $answerTranslations,
+                new AnswerTranslation([
+                    "uuid" => Str::orderedUuid()->getHex(),
+                    "language_id" => $lang["id"],
+                    "answer_id" => $answer["answer_id"],
+                    "paragraph" => $body[$lang["code"]]["paragraph"],
+                ])
+            );
+        }
+
         // Save answer's translations
         $translations = $answer
             ->translations()
             ->saveMany($answerTranslations);
-        
+
         // Fallback and delete answer
         if (!$translations) {
             $answer->delete();
@@ -88,13 +123,12 @@ class AnswerController extends Controller
             [
                 "message" => transResMessage("created", ["path" => "answer"]),
                 "data" => [
-                    "quiz" => $answer,
+                    "answer" => $answer,
                     "translations" => $answerTranslations,
                 ],
             ],
             201
         );
-    
     }
     //!
 
@@ -121,19 +155,19 @@ class AnswerController extends Controller
         for ($i = 0; $i < count($answer->translations); $i++) {
             // Check if the element was a en record
             if ($answer->translations[$i]->language["code"] === "en") {
-                $answer->translations[$i]["name"] =
-                    $body["en"]["name"] ?? $answer->translations[$i]["name"];
-                $answer->translations[$i]["description"] =
-                    $body["en"]["description"] ??
-                    $answer->translations[$i]["description"];
+                //$answer->translations[$i]["name"] =
+                 //   $body["en"]["name"] ?? $answer->translations[$i]["name"];
+                $answer->translations[$i]["paragraph"] =
+                    $body["en"]["paragraph"] ??
+                    $answer->translations[$i]["paragraph"];
             }
             // Check if the element was a ar record
             elseif ($answer->translations[$i]->language["code"] === "ar") {
-                $answer->translations[$i]["name"] =
-                    $body["ar"]["name"] ?? $answer->translations[$i]["name"];
-                $answer->translations[$i]["description"] =
-                    $body["ar"]["description"] ??
-                    $answer->translations[$i]["description"];
+                //$answer->translations[$i]["name"] =
+                   // $body["ar"]["name"] ?? $answer->translations[$i]["name"];
+                $answer->translations[$i]["paragraph"] =
+                    $body["ar"]["paragraph"] ??
+                    $answer->translations[$i]["paragraph"];
             }
         }
 
