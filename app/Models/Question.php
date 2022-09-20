@@ -33,6 +33,11 @@ class Question extends Model
         return $this->belongsTo(QuizSubject::class);
     }
 
+    public function answers() 
+    {
+        return $this->hasMany(Answer::class);
+    }
+
     /**
      * Sorts a collection on request params if passed, using asc/desc orders
      *

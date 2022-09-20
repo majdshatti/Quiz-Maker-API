@@ -33,8 +33,8 @@ class AnswerCreateRequest extends FormRequest
 
         foreach ($langs as $lang) {
             $rules = array_merge($rules, [
-                $lang["code"] . ".name" => "required|string|unique:answer_translation,name",
-                $lang["code"] . ".paragraph" => "required|string|min:10|max:400",
+                //$lang["code"] . ".name" => "required|string|unique:answer_translation,name",
+                $lang["code"] . ".paragraph" => "required|string|max:400",
             ]);
         }
         return $rules;
