@@ -19,6 +19,7 @@ Route::group(
         require_once "question.php";
         require_once "quiz.php";
         require_once "answer.php";
+        require_once "takeQuiz.php";
     }
 );
 
