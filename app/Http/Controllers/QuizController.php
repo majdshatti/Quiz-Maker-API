@@ -78,11 +78,12 @@ class QuizController extends Controller
                 $nameToBeSlugified = $body[$lang["code"]]["name"];
             }
         }
-
+        
         // Create quiz
         $quiz = Quiz::create([
             "uuid" => Str::orderedUuid()->getHex(),
             "slug" => Str::slug($nameToBeSlugified),
+            "level" => $body["level"],
         ]);
 
         // Save quiz's translations

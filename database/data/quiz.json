@@ -5,6 +5,7 @@
         "id":"1",
         "uuid": "9748117cc5ae43468909ffd8dd218c0e",
         "slug": "beginner",
+        "level": "1",
         "created_at": "2022-09-16T19:51:08.000000Z",
         "updated_at": "2022-09-16T19:51:08.000000Z"
     },
@@ -13,6 +14,7 @@
         "id":"2",
         "uuid": "974811e1056341fda83580502f0863af",
         "slug": "pre-intermediate",
+        "level": "2",
         "created_at": "2022-09-16T19:52:13.000000Z",
         "updated_at": "2022-09-16T19:52:13.000000Z"
     },
@@ -21,6 +23,7 @@
         "id":"3",
         "uuid": "974811fefcef43f29f7252445a1aff6f",
         "slug": "intermediate",
+        "level": "3",
         "created_at": "2022-09-16T19:52:33.000000Z",
         "updated_at": "2022-09-16T19:52:33.000000Z"
     },
@@ -29,6 +32,7 @@
         "id":"4",
         "uuid": "9748123a562540d2a092a58519c7cdc6",
         "slug": "advanced",
+        "level": "4",
         "created_at": "2022-09-16T19:53:12.000000Z",
         "updated_at": "2022-09-16T19:53:12.000000Z"
     }

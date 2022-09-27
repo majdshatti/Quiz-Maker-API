@@ -34,6 +34,11 @@ class User extends Authenticatable
         "email_verified_at" => "datetime",
     ];
 
+    public function takenQuizzes()
+    {
+        return $this->hasMany(TakenQuiz::class, "user_id");
+    }
+
     //***************************************/
     //*************** SCOPES ****************/
     //***************************************/
