@@ -78,7 +78,6 @@ class QuizController extends Controller
                 $nameToBeSlugified = $body[$lang["code"]]["name"];
             }
         }
-        app\Http\Controllers\QuizController.php        $level = 0;
         
         // Create quiz
         $quiz = Quiz::create([
