@@ -15,6 +15,7 @@ class Quiz extends Model
     protected $fillable = [
         "uuid",
         "slug",
+        "level",
         "created_at",
         "updated_at"
     ];
