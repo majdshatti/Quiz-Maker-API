@@ -1,84 +1,62 @@
 [
     {
-
-        "id":"1",
-        "uuid": "9748117cbf4a42c19933f6a32b8983c0",
-        "name": "beginner",
-        "description": "\u0647\u0630\u0627 \u0645\u0633\u062a\u0648\u0649 \u0645\u0628\u062a\u062f\u0623",
+        "id": 1,
+        "uuid": "975a39e5edc944ccbb1620c1f24b7dd5",
+        "name": "Beginner",
+        "description": "The beginner level is the one level where questions can solely focus on basics",
         "quiz_id": 1,
         "language_id": 1,
-        "created_at": "2022-09-16T19:51:08.000000Z",
-        "updated_at": "2022-09-16T19:51:08.000000Z"
+        "created_at": "2022-09-25T20:29:02.000000Z",
+        "updated_at": "2022-09-25T20:29:02.000000Z"
     },
     {
-        "id":"2",
-        "uuid": "9748117cc54e4f2b9f120c13fdfdb6b4",
-        "name": "\u0645\u0628\u062a\u062f\u0623",
-        "description": "that is beginner level",
+        "id": 2,
+        "uuid": "975a39e5ef46427f9a73c27b0a6b3f4f",
+        "name": "\u0645\u0628\u062a\u062f\u0626",
+        "description": "\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0645\u0628\u062a\u062f\u0626\u064a\u0646 \u0647\u0648 \u0627\u0644\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0648\u062d\u064a\u062f \u062d\u064a\u062b \u064a\u0645\u0643\u0646 \u0644\u0644\u0623\u0633\u0626\u0644\u0629 \u0627\u0644\u062a\u0631\u0643\u064a\u0632 \u0641\u0642\u0637 \u0639\u0644\u0649 \u0627\u0644\u0623\u0633\u0627\u0633\u064a\u0627\u062a",
         "quiz_id": 1,
         "language_id": 2,
-        "created_at": "2022-09-16T19:51:08.000000Z",
-        "updated_at": "2022-09-16T19:51:08.000000Z"
+        "created_at": "2022-09-25T20:29:02.000000Z",
+        "updated_at": "2022-09-25T20:29:02.000000Z"
     },
     {
-        "id":"3",
-        "uuid": "974811e0fefc43f487df4e8df6e1f70d",
-        "name": "pre-intermediate",
-        "description": "\u0647\u0630\u0627 \u0645\u0633\u062a\u0648\u0649 \u0645\u0627 \u0642\u0628\u0644 \u0627\u0644\u0645\u062a\u0648\u0633\u0637",
+        "id": 3,
+        "uuid": "975a3c57840042c9ac756137e8df96d2",
+        "name": "Advanced",
+        "description": "The advanced level is the one level where questions requires good knowledge in the presented subject",
         "quiz_id": 2,
         "language_id": 1,
-        "created_at": "2022-09-16T19:52:13.000000Z",
-        "updated_at": "2022-09-16T19:52:13.000000Z"
+        "created_at": "2022-09-25T20:35:52.000000Z",
+        "updated_at": "2022-09-25T20:35:52.000000Z"
     },
     {
-        "id":"4",
-        "uuid": "974811e105004e23878c910a8596255b",
-        "name": "\u0645\u0627 \u0642\u0628\u0644 \u0627\u0644\u0645\u062a\u0648\u0633\u0637",
-        "description": "that is pre-intermediate level",
+        "id": 4,
+        "uuid": "975a3c5785774a6286a01a0ec127042b",
+        "name": "\u0645\u062a\u0642\u062f\u0645",
+        "description": "\u0627\u0644\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0645\u062a\u0642\u062f\u0645 \u0647\u0648 \u0627\u0644\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0648\u062d\u064a\u062f \u0627\u0644\u0630\u064a \u062a\u062a\u0637\u0644\u0628 \u0641\u064a\u0647 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0645\u0639\u0631\u0641\u0629 \u062c\u064a\u062f\u0629 \u0628\u0627\u0644\u0645\u0648\u0636\u0648\u0639 \u0627\u0644\u0645\u0642\u062f\u0645",
         "quiz_id": 2,
         "language_id": 2,
-        "created_at": "2022-09-16T19:52:14.000000Z",
-        "updated_at": "2022-09-16T19:52:14.000000Z"
+        "created_at": "2022-09-25T20:35:52.000000Z",
+        "updated_at": "2022-09-25T20:35:52.000000Z"
     },
     {
-        "id":"5",
-        "uuid": "974811fef66b407aa93c8ab471ef8080",
-        "name": "intermediate",
-        "description": "\u0647\u0630\u0627 \u0645\u0633\u062a\u0648\u0649 \u0645\u0627 \u0627\u0644\u0645\u062a\u0648\u0633\u0637",
+        "id": 5,
+        "uuid": "975a537d9e3b41a685155970d1498fb4",
+        "name": "Intermediate",
+        "description": "The advanced level is the one level where questions can be on both sides, easy and difficult",
         "quiz_id": 3,
         "language_id": 1,
-        "created_at": "2022-09-16T19:52:33.000000Z",
-        "updated_at": "2022-09-16T19:52:33.000000Z"
+        "created_at": "2022-09-25T21:40:35.000000Z",
+        "updated_at": "2022-09-25T21:40:35.000000Z"
     },
     {
-        "id":"6",
-        "uuid": "974811fefc374f38b62c657a33dc056f",
-        "name": "\u0645\u0627 \u0627\u0644\u0645\u062a\u0648\u0633\u0637",
-        "description": "that is intermediate level",
+        "id": 6,
+        "uuid": "975a537d9fbe4248ad7666b8c7a099ca",
+        "name": "\u0645\u062a\u0648\u0633\u0637",
+        "description": "\u0627\u0644\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0645\u062a\u0648\u0633\u0637 \u0647\u0648 \u0627\u0644\u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0648\u062d\u064a\u062f \u062d\u064a\u062b \u064a\u0645\u0643\u0646 \u0623\u0646 \u062a\u0643\u0648\u0646 \u0627\u0644\u0623\u0633\u0626\u0644\u0629 \u0639\u0644\u0649 \u0643\u0644\u0627 \u0627\u0644\u062c\u0627\u0646\u0628\u064a\u0646 \u060c \u0633\u0647\u0644\u0629 \u0648\u0635\u0639\u0628\u0629",
         "quiz_id": 3,
         "language_id": 2,
-        "created_at": "2022-09-16T19:52:33.000000Z",
-        "updated_at": "2022-09-16T19:52:33.000000Z"
-    },
-    {
-        "id":"7",
-        "uuid": "9748123a508b4a1398070b886332083e",
-        "name": "advanced",
-        "description": "\u0647\u0630\u0627 \u0645\u0633\u062a\u0648\u0649 \u0645\u062d\u062a\u0631\u0641",
-        "quiz_id": 4,
-        "language_id": 1,
-        "created_at": "2022-09-16T19:53:12.000000Z",
-        "updated_at": "2022-09-16T19:53:12.000000Z"
-    },
-    {
-        "id":"8",
-        "uuid": "9748123a55d9486cb1c042b2d3ca832f",
-        "name": "\u0645\u062d\u062a\u0631\u0641",
-        "description": "that is advanced level",
-        "quiz_id": 4,
-        "language_id": 2,
-        "created_at": "2022-09-16T19:53:12.000000Z",
-        "updated_at": "2022-09-16T19:53:12.000000Z"
+        "created_at": "2022-09-25T21:40:35.000000Z",
+        "updated_at": "2022-09-25T21:40:35.000000Z"
     }
 ]
-

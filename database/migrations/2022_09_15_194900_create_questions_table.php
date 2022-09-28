@@ -15,6 +15,7 @@ return new class extends Migration {
         Schema::create("question", function (Blueprint $table) {
             $table->id();
             $table->uuid("uuid");
+            $table->string("duration");
             $table
                 ->foreignId("quiz_subject_id")
                 ->constrained("quiz_subject")

@@ -1,83 +1,23 @@
 [
     {
         "id": 1,
+        "quiz_id": 1,
         "subject_id": 1,
-        "quiz_id": 1
+        "created_at": null,
+        "updated_at": null
     },
     {
         "id": 2,
+        "quiz_id": 2,
         "subject_id": 1,
-        "quiz_id": 2
+        "created_at": null,
+        "updated_at": null
     },
     {
         "id": 3,
+        "quiz_id": 3,
         "subject_id": 1,
-        "quiz_id": 3
-    },
-    {
-        "id": 4,
-        "subject_id": 2,
-        "quiz_id": 1
-    },
-    {
-        "id": 5,
-        "subject_id": 2,
-        "quiz_id": 2
-    },
-    {
-        "id": 6,
-        "subject_id": 2,
-        "quiz_id": 3
-    },
-    {
-        "id": 7,
-        "subject_id": 4,
-        "quiz_id": 1
-    },
-    {
-        "id": 8,
-        "subject_id": 4,
-        "quiz_id": 2
-    },
-    {
-        "id": 9,
-        "subject_id": 4,
-        "quiz_id": 3
-    },
-    {
-        "id": 10,
-        "subject_id": 5,
-        "quiz_id": 1
-    },
-    {
-        "id": 11,
-        "subject_id": 5,
-        "quiz_id": 2
-
-    },
-    {
-        "id": 12,
-        "subject_id": 5,
-        "quiz_id": 3
-    },
-    {
-        "id": 13,
-        "subject_id": 1,
-        "quiz_id": 4
-    },
-    {
-        "id": 14,
-        "subject_id": 2,
-        "quiz_id": 4
-    },
-    {
-        "id": 15,
-        "subject_id": 4,
-        "quiz_id": 4
-    },
-    {
-        "id": 16,
-        "subject_id": 5,
-        "quiz_id": 4
+        "created_at": null,
+        "updated_at": null
     }
 ]

@@ -1,0 +1,1082 @@
+[
+    {
+        "id": 1,
+        "uuid": "975a4f2b7a0443acb2cdb52a3b463e4e",
+        "paragraph": "Setting Up local Environment variable",
+        "answer_id": 1,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:28:31.000000Z",
+        "updated_at": "2022-09-25T21:28:31.000000Z"
+    },
+    {
+        "id": 2,
+        "uuid": "975a4f2b7a1c41ee8902176f5e9b81f9",
+        "paragraph": "\u0625\u0639\u062f\u0627\u062f \u0645\u062a\u063a\u064a\u0631 \u0627\u0644\u0628\u064a\u0626\u0629 \u0627\u0644\u0645\u062d\u0644\u064a\u0629",
+        "answer_id": 1,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:28:31.000000Z",
+        "updated_at": "2022-09-25T21:28:31.000000Z"
+    },
+    {
+        "id": 3,
+        "uuid": "975a4f5ae527411e87798cbaa757ebc2",
+        "paragraph": "Optimization",
+        "answer_id": 2,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:29:02.000000Z",
+        "updated_at": "2022-09-25T21:29:02.000000Z"
+    },
+    {
+        "id": 4,
+        "uuid": "975a4f5ae5534e6db6419a594ab22fb9",
+        "paragraph": "\u062a\u062d\u0633\u064a\u0646",
+        "answer_id": 2,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:29:02.000000Z",
+        "updated_at": "2022-09-25T21:29:02.000000Z"
+    },
+    {
+        "id": 5,
+        "uuid": "975a4f8cb261466e848b01e163e143dd",
+        "paragraph": "Hosting",
+        "answer_id": 3,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:29:34.000000Z",
+        "updated_at": "2022-09-25T21:29:34.000000Z"
+    },
+    {
+        "id": 6,
+        "uuid": "975a4f8cb2764f218afdec35399a789f",
+        "paragraph": "\u0627\u0644\u0627\u0633\u062a\u0636\u0627\u0641\u0629",
+        "answer_id": 3,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:29:34.000000Z",
+        "updated_at": "2022-09-25T21:29:34.000000Z"
+    },
+    {
+        "id": 7,
+        "uuid": "975a4fcfdc3146338d6742aa8c169210",
+        "paragraph": "None of these",
+        "answer_id": 4,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:30:18.000000Z",
+        "updated_at": "2022-09-25T21:30:18.000000Z"
+    },
+    {
+        "id": 8,
+        "uuid": "975a4fcfdc464c5fbc3544a84bfe055f",
+        "paragraph": "\u0623\u064a\u0627 \u0645\u0646 \u0647\u0630\u0647",
+        "answer_id": 4,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:30:18.000000Z",
+        "updated_at": "2022-09-25T21:30:18.000000Z"
+    },
+    {
+        "id": 9,
+        "uuid": "975a505cdeed43f4ae92e2254a782490",
+        "paragraph": "php artisan new",
+        "answer_id": 5,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:31:51.000000Z",
+        "updated_at": "2022-09-25T21:31:51.000000Z"
+    },
+    {
+        "id": 10,
+        "uuid": "975a505cdf014d13b07b5cb5fff7cd72",
+        "paragraph": "php artisan new",
+        "answer_id": 5,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:31:51.000000Z",
+        "updated_at": "2022-09-25T21:31:51.000000Z"
+    },
+    {
+        "id": 11,
+        "uuid": "975a5067765b40efb9d3ae7087dabc3d",
+        "paragraph": "php artisan",
+        "answer_id": 6,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:31:58.000000Z",
+        "updated_at": "2022-09-25T21:31:58.000000Z"
+    },
+    {
+        "id": 12,
+        "uuid": "975a506776744e3cbb85e93245ee3a8b",
+        "paragraph": "php artisan",
+        "answer_id": 6,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:31:58.000000Z",
+        "updated_at": "2022-09-25T21:31:58.000000Z"
+    },
+    {
+        "id": 13,
+        "uuid": "975a506f61da4d87bdf2108c88c99878",
+        "paragraph": "php artisan start",
+        "answer_id": 7,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:32:03.000000Z",
+        "updated_at": "2022-09-25T21:32:03.000000Z"
+    },
+    {
+        "id": 14,
+        "uuid": "975a506f61ee4b138899a0afd43c7b95",
+        "paragraph": "php artisan start",
+        "answer_id": 7,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:32:03.000000Z",
+        "updated_at": "2022-09-25T21:32:03.000000Z"
+    },
+    {
+        "id": 15,
+        "uuid": "975a507a7da74499ab8522f323f42408",
+        "paragraph": "php artisan serve",
+        "answer_id": 8,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:32:10.000000Z",
+        "updated_at": "2022-09-25T21:32:10.000000Z"
+    },
+    {
+        "id": 16,
+        "uuid": "975a507a7dbb43ad854132c61ccd0a62",
+        "paragraph": "php artisan serve",
+        "answer_id": 8,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:32:10.000000Z",
+        "updated_at": "2022-09-25T21:32:10.000000Z"
+    },
+    {
+        "id": 17,
+        "uuid": "975a5113d2f4400b8062c1ddea56c327",
+        "paragraph": "composer create-project laravel/laravel myproject",
+        "answer_id": 9,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:33:51.000000Z",
+        "updated_at": "2022-09-25T21:33:51.000000Z"
+    },
+    {
+        "id": 18,
+        "uuid": "975a5113d30a4162aa6ceec6f00a1972",
+        "paragraph": "composer create-project laravel/laravel myproject",
+        "answer_id": 9,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:33:51.000000Z",
+        "updated_at": "2022-09-25T21:33:51.000000Z"
+    },
+    {
+        "id": 19,
+        "uuid": "975a513003814067bc1cd819bc128c43",
+        "paragraph": "composer new-project laravel/laravel myproject",
+        "answer_id": 10,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:34:09.000000Z",
+        "updated_at": "2022-09-25T21:34:09.000000Z"
+    },
+    {
+        "id": 20,
+        "uuid": "975a51300394403a98b2c4a6ef27509e",
+        "paragraph": "composer new-project laravel/laravel myproject",
+        "answer_id": 10,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:34:09.000000Z",
+        "updated_at": "2022-09-25T21:34:09.000000Z"
+    },
+    {
+        "id": 21,
+        "uuid": "975a5145cc5440a1993e18017283682e",
+        "paragraph": "composer create-project new laravel/laravel myproject",
+        "answer_id": 11,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:34:23.000000Z",
+        "updated_at": "2022-09-25T21:34:23.000000Z"
+    },
+    {
+        "id": 22,
+        "uuid": "975a5145cc6c4a178345a7c547c9167f",
+        "paragraph": "composer create-project new laravel/laravel myproject",
+        "answer_id": 11,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:34:23.000000Z",
+        "updated_at": "2022-09-25T21:34:23.000000Z"
+    },
+    {
+        "id": 23,
+        "uuid": "975a5189addb4bacbbf207a17a40fa0b",
+        "paragraph": "8000",
+        "answer_id": 12,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:35:08.000000Z",
+        "updated_at": "2022-09-25T21:35:08.000000Z"
+    },
+    {
+        "id": 24,
+        "uuid": "975a5189adf04041b3639d19a212894c",
+        "paragraph": "8000",
+        "answer_id": 12,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:35:08.000000Z",
+        "updated_at": "2022-09-25T21:35:08.000000Z"
+    },
+    {
+        "id": 25,
+        "uuid": "975a5198cd4e4a89a982238add9f6805",
+        "paragraph": "7000",
+        "answer_id": 13,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:35:18.000000Z",
+        "updated_at": "2022-09-25T21:35:18.000000Z"
+    },
+    {
+        "id": 26,
+        "uuid": "975a5198cd644762ae73ec42f24fb6f2",
+        "paragraph": "7000",
+        "answer_id": 13,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:35:18.000000Z",
+        "updated_at": "2022-09-25T21:35:18.000000Z"
+    },
+    {
+        "id": 27,
+        "uuid": "975a519f318e43d9bcba7520205906c5",
+        "paragraph": "6000",
+        "answer_id": 14,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:35:22.000000Z",
+        "updated_at": "2022-09-25T21:35:22.000000Z"
+    },
+    {
+        "id": 28,
+        "uuid": "975a519f31a34c1482aadc5db22e877f",
+        "paragraph": "6000",
+        "answer_id": 14,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:35:22.000000Z",
+        "updated_at": "2022-09-25T21:35:22.000000Z"
+    },
+    {
+        "id": 29,
+        "uuid": "975a51b8112149db9aef92232a2a9447",
+        "paragraph": "5000",
+        "answer_id": 15,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:35:38.000000Z",
+        "updated_at": "2022-09-25T21:35:38.000000Z"
+    },
+    {
+        "id": 30,
+        "uuid": "975a51b8113645bfa1ddc5459a7da88f",
+        "paragraph": "5000",
+        "answer_id": 15,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:35:38.000000Z",
+        "updated_at": "2022-09-25T21:35:38.000000Z"
+    },
+    {
+        "id": 31,
+        "uuid": "975a52825aaf4f7b95b894706a8669d5",
+        "paragraph": "php artisan create migration",
+        "answer_id": 16,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:37:51.000000Z",
+        "updated_at": "2022-09-25T21:37:51.000000Z"
+    },
+    {
+        "id": 32,
+        "uuid": "975a52825ac143bfb20f2e62059fc46f",
+        "paragraph": "php artisan create migration",
+        "answer_id": 16,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:37:51.000000Z",
+        "updated_at": "2022-09-25T21:37:51.000000Z"
+    },
+    {
+        "id": 33,
+        "uuid": "975a528deb4d4f7c871bcef24d6e5671",
+        "paragraph": "php artisan serve",
+        "answer_id": 17,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:37:58.000000Z",
+        "updated_at": "2022-09-25T21:37:58.000000Z"
+    },
+    {
+        "id": 34,
+        "uuid": "975a528deb6043ae8bd2ce4ebe2adca0",
+        "paragraph": "php artisan serve",
+        "answer_id": 17,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:37:58.000000Z",
+        "updated_at": "2022-09-25T21:37:58.000000Z"
+    },
+    {
+        "id": 35,
+        "uuid": "975a52cccb7c4d08b85b9d925dbb8d7b",
+        "paragraph": "php artisan make:migration migration_name",
+        "answer_id": 18,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:38:40.000000Z",
+        "updated_at": "2022-09-25T21:38:40.000000Z"
+    },
+    {
+        "id": 36,
+        "uuid": "975a52cccb944907b61899811fb5ce31",
+        "paragraph": "php artisan make:migration migration_name",
+        "answer_id": 18,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:38:40.000000Z",
+        "updated_at": "2022-09-25T21:38:40.000000Z"
+    },
+    {
+        "id": 37,
+        "uuid": "975a52d9ad024250b054ff20dbacff9f",
+        "paragraph": "php artisan migrate",
+        "answer_id": 19,
+        "language_id": 1,
+        "created_at": "2022-09-25T21:38:48.000000Z",
+        "updated_at": "2022-09-25T21:38:48.000000Z"
+    },
+    {
+        "id": 38,
+        "uuid": "975a52d9ad1b4df0aa42c324a1092922",
+        "paragraph": "php artisan migrate",
+        "answer_id": 19,
+        "language_id": 2,
+        "created_at": "2022-09-25T21:38:48.000000Z",
+        "updated_at": "2022-09-25T21:38:48.000000Z"
+    },
+    {
+        "id": 39,
+        "uuid": "975baa5b64494d8684aa8074e2e30eab",
+        "paragraph": "php artisan migrate:rollback",
+        "answer_id": 20,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:39:19.000000Z",
+        "updated_at": "2022-09-26T13:39:19.000000Z"
+    },
+    {
+        "id": 40,
+        "uuid": "975baa5b6461405b8a5c25e91c10ee36",
+        "paragraph": "php artisan migrate:rollback",
+        "answer_id": 20,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:39:19.000000Z",
+        "updated_at": "2022-09-26T13:39:19.000000Z"
+    },
+    {
+        "id": 41,
+        "uuid": "975baa67ce6c4ecab7d33c30099ea0be",
+        "paragraph": "php artisan migration:rollback",
+        "answer_id": 21,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:39:27.000000Z",
+        "updated_at": "2022-09-26T13:39:27.000000Z"
+    },
+    {
+        "id": 42,
+        "uuid": "975baa67ce8343e997efca9252da6029",
+        "paragraph": "php artisan migration:rollback",
+        "answer_id": 21,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:39:27.000000Z",
+        "updated_at": "2022-09-26T13:39:27.000000Z"
+    },
+    {
+        "id": 43,
+        "uuid": "975baa7466614941b3b6471d0546ee4d",
+        "paragraph": "php artisan rollback migration",
+        "answer_id": 22,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:39:35.000000Z",
+        "updated_at": "2022-09-26T13:39:35.000000Z"
+    },
+    {
+        "id": 44,
+        "uuid": "975baa74667849b48108c452eca09d9a",
+        "paragraph": "php artisan rollback migration",
+        "answer_id": 22,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:39:35.000000Z",
+        "updated_at": "2022-09-26T13:39:35.000000Z"
+    },
+    {
+        "id": 45,
+        "uuid": "975baa806a2b46d9859de65f9009b6b6",
+        "paragraph": "php artisan rollback",
+        "answer_id": 23,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:39:43.000000Z",
+        "updated_at": "2022-09-26T13:39:43.000000Z"
+    },
+    {
+        "id": 46,
+        "uuid": "975baa806a424d55a851e587665bc998",
+        "paragraph": "php artisan rollback",
+        "answer_id": 23,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:39:43.000000Z",
+        "updated_at": "2022-09-26T13:39:43.000000Z"
+    },
+    {
+        "id": 47,
+        "uuid": "975baad29c0d407892ac9009076fe004",
+        "paragraph": "php artisan rollback",
+        "answer_id": 24,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:40:37.000000Z",
+        "updated_at": "2022-09-26T13:40:37.000000Z"
+    },
+    {
+        "id": 48,
+        "uuid": "975baad29c23403bae11eacdbe1b976b",
+        "paragraph": "php artisan rollback",
+        "answer_id": 24,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:40:37.000000Z",
+        "updated_at": "2022-09-26T13:40:37.000000Z"
+    },
+    {
+        "id": 49,
+        "uuid": "975baaf11b9643d3b583ebd35d18a346",
+        "paragraph": "php artisan migration:reset",
+        "answer_id": 25,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:40:57.000000Z",
+        "updated_at": "2022-09-26T13:40:57.000000Z"
+    },
+    {
+        "id": 50,
+        "uuid": "975baaf11bad4d569f2e52b3f7ffbd0c",
+        "paragraph": "php artisan migration:reset",
+        "answer_id": 25,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:40:57.000000Z",
+        "updated_at": "2022-09-26T13:40:57.000000Z"
+    },
+    {
+        "id": 51,
+        "uuid": "975baafffabe41149e83a4f9875410a7",
+        "paragraph": "php artisan reset:migration",
+        "answer_id": 26,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:41:07.000000Z",
+        "updated_at": "2022-09-26T13:41:07.000000Z"
+    },
+    {
+        "id": 52,
+        "uuid": "975baafffad042cfbfd9864a2261a933",
+        "paragraph": "php artisan reset:migration",
+        "answer_id": 26,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:41:07.000000Z",
+        "updated_at": "2022-09-26T13:41:07.000000Z"
+    },
+    {
+        "id": 53,
+        "uuid": "975bab0d21a449ddbfb484864156e9a7",
+        "paragraph": "php artisan migrate:reset",
+        "answer_id": 27,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:41:15.000000Z",
+        "updated_at": "2022-09-26T13:41:15.000000Z"
+    },
+    {
+        "id": 54,
+        "uuid": "975bab0d21ba4d1a8d7e4507ac1ffdc6",
+        "paragraph": "php artisan migrate:reset",
+        "answer_id": 27,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:41:15.000000Z",
+        "updated_at": "2022-09-26T13:41:15.000000Z"
+    },
+    {
+        "id": 55,
+        "uuid": "975bab5524da4121be95ff5036cd5521",
+        "paragraph": "database.php",
+        "answer_id": 28,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:42:03.000000Z",
+        "updated_at": "2022-09-26T13:42:03.000000Z"
+    },
+    {
+        "id": 56,
+        "uuid": "975bab5524f14479b008c5fde680fe3c",
+        "paragraph": "database.php",
+        "answer_id": 28,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:42:03.000000Z",
+        "updated_at": "2022-09-26T13:42:03.000000Z"
+    },
+    {
+        "id": 57,
+        "uuid": "975bab9c024d4ac2b49f28daa8d56647",
+        "paragraph": "config.php",
+        "answer_id": 29,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:42:49.000000Z",
+        "updated_at": "2022-09-26T13:42:49.000000Z"
+    },
+    {
+        "id": 58,
+        "uuid": "975bab9c02634ebf93cbcded8b5f7b23",
+        "paragraph": "config.php",
+        "answer_id": 29,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:42:49.000000Z",
+        "updated_at": "2022-09-26T13:42:49.000000Z"
+    },
+    {
+        "id": 59,
+        "uuid": "975babbf75eb4f3d9afaf3106b6cd4e4",
+        "paragraph": "connection.php",
+        "answer_id": 30,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:43:12.000000Z",
+        "updated_at": "2022-09-26T13:43:12.000000Z"
+    },
+    {
+        "id": 60,
+        "uuid": "975babbf76004d628e8d94d55267a2f9",
+        "paragraph": "connection.php",
+        "answer_id": 30,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:43:12.000000Z",
+        "updated_at": "2022-09-26T13:43:12.000000Z"
+    },
+    {
+        "id": 61,
+        "uuid": "975babce011747ffa40cb2b637ac6dae",
+        "paragraph": ".env",
+        "answer_id": 31,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:43:22.000000Z",
+        "updated_at": "2022-09-26T13:43:22.000000Z"
+    },
+    {
+        "id": 62,
+        "uuid": "975babce012e44fb8ecb6c52592b8569",
+        "paragraph": ".env",
+        "answer_id": 31,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:43:22.000000Z",
+        "updated_at": "2022-09-26T13:43:22.000000Z"
+    },
+    {
+        "id": 63,
+        "uuid": "975bac2df851450784de7bfb99e8d400",
+        "paragraph": "php artisan main --version",
+        "answer_id": 32,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:44:25.000000Z",
+        "updated_at": "2022-09-26T13:44:25.000000Z"
+    },
+    {
+        "id": 64,
+        "uuid": "975bac2df8674629abe970dae3bb38ef",
+        "paragraph": "php artisan main --version",
+        "answer_id": 32,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:44:25.000000Z",
+        "updated_at": "2022-09-26T13:44:25.000000Z"
+    },
+    {
+        "id": 65,
+        "uuid": "975bac3649af4ee9b3fbbac241cf300d",
+        "paragraph": "php artisan --version status",
+        "answer_id": 33,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:44:30.000000Z",
+        "updated_at": "2022-09-26T13:44:30.000000Z"
+    },
+    {
+        "id": 66,
+        "uuid": "975bac3649c6400fa01db7d2e120c935",
+        "paragraph": "php artisan --version status",
+        "answer_id": 33,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:44:30.000000Z",
+        "updated_at": "2022-09-26T13:44:30.000000Z"
+    },
+    {
+        "id": 67,
+        "uuid": "975bac3efb3f459499c43a0a7447f65e",
+        "paragraph": "php artisan check --version",
+        "answer_id": 34,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:44:36.000000Z",
+        "updated_at": "2022-09-26T13:44:36.000000Z"
+    },
+    {
+        "id": 68,
+        "uuid": "975bac3efb5747bba83285e072b8d1c3",
+        "paragraph": "php artisan check --version",
+        "answer_id": 34,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:44:36.000000Z",
+        "updated_at": "2022-09-26T13:44:36.000000Z"
+    },
+    {
+        "id": 69,
+        "uuid": "975bac4dd4c141669680875b95c5778b",
+        "paragraph": "php artisan --version",
+        "answer_id": 35,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:44:46.000000Z",
+        "updated_at": "2022-09-26T13:44:46.000000Z"
+    },
+    {
+        "id": 70,
+        "uuid": "975bac4dd4d5432fa7ad534bd1e1cdcb",
+        "paragraph": "php artisan --version",
+        "answer_id": 35,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:44:46.000000Z",
+        "updated_at": "2022-09-26T13:44:46.000000Z"
+    },
+    {
+        "id": 71,
+        "uuid": "975bac86247348ffb56d01c5c10b66ab",
+        "paragraph": "php artisan make:middleware Mymiddleware",
+        "answer_id": 36,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:45:22.000000Z",
+        "updated_at": "2022-09-26T13:45:22.000000Z"
+    },
+    {
+        "id": 72,
+        "uuid": "975bac862493438bad7ed357193e6dba",
+        "paragraph": "php artisan make:middleware Mymiddleware",
+        "answer_id": 36,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:45:22.000000Z",
+        "updated_at": "2022-09-26T13:45:22.000000Z"
+    },
+    {
+        "id": 73,
+        "uuid": "975bac944adf48e9a799886a9bbebce9",
+        "paragraph": "php artisan middleware Mymiddleware",
+        "answer_id": 37,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:45:32.000000Z",
+        "updated_at": "2022-09-26T13:45:32.000000Z"
+    },
+    {
+        "id": 74,
+        "uuid": "975bac944af840dda49de89f1e7d6ebd",
+        "paragraph": "php artisan middleware Mymiddleware",
+        "answer_id": 37,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:45:32.000000Z",
+        "updated_at": "2022-09-26T13:45:32.000000Z"
+    },
+    {
+        "id": 75,
+        "uuid": "975bac9f3f944547a14bcdf2b1719035",
+        "paragraph": "php artisan create:middleware Mymiddleware",
+        "answer_id": 38,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:45:39.000000Z",
+        "updated_at": "2022-09-26T13:45:39.000000Z"
+    },
+    {
+        "id": 76,
+        "uuid": "975bac9f3fac4eea8aea9b660b74cb29",
+        "paragraph": "php artisan create:middleware Mymiddleware",
+        "answer_id": 38,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:45:39.000000Z",
+        "updated_at": "2022-09-26T13:45:39.000000Z"
+    },
+    {
+        "id": 77,
+        "uuid": "975bacaf2a8548d2a8838c5488c363c9",
+        "paragraph": "php artisan middleware:make Mymiddleware",
+        "answer_id": 39,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:45:49.000000Z",
+        "updated_at": "2022-09-26T13:45:49.000000Z"
+    },
+    {
+        "id": 78,
+        "uuid": "975bacaf2a9c4c32ae89c85cdcd385c0",
+        "paragraph": "php artisan middleware:make Mymiddleware",
+        "answer_id": 39,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:45:49.000000Z",
+        "updated_at": "2022-09-26T13:45:49.000000Z"
+    },
+    {
+        "id": 79,
+        "uuid": "975bad6edced4b739763e5848438c4f4",
+        "paragraph": "Query Builder",
+        "answer_id": 40,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:47:55.000000Z",
+        "updated_at": "2022-09-26T13:47:55.000000Z"
+    },
+    {
+        "id": 80,
+        "uuid": "975bad6edd034162aa970a00beba4f05",
+        "paragraph": "Query Builder",
+        "answer_id": 40,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:47:55.000000Z",
+        "updated_at": "2022-09-26T13:47:55.000000Z"
+    },
+    {
+        "id": 81,
+        "uuid": "975bad77b3754d9da7563966d7fd4292",
+        "paragraph": "Eloquent ORM",
+        "answer_id": 41,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:48:01.000000Z",
+        "updated_at": "2022-09-26T13:48:01.000000Z"
+    },
+    {
+        "id": 82,
+        "uuid": "975bad77b38b4b8e8c0165bb3cc172aa",
+        "paragraph": "Eloquent ORM",
+        "answer_id": 41,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:48:01.000000Z",
+        "updated_at": "2022-09-26T13:48:01.000000Z"
+    },
+    {
+        "id": 83,
+        "uuid": "975bad9fe708413daa107960d51ccb74",
+        "paragraph": "Both",
+        "answer_id": 42,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:48:27.000000Z",
+        "updated_at": "2022-09-26T13:48:27.000000Z"
+    },
+    {
+        "id": 84,
+        "uuid": "975bad9fe71c4f068c8001eb9c027088",
+        "paragraph": "\u0643\u0644\u0627\u0647\u0645\u0627",
+        "answer_id": 42,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:48:27.000000Z",
+        "updated_at": "2022-09-26T13:48:27.000000Z"
+    },
+    {
+        "id": 85,
+        "uuid": "975bae0144774f91aa018dfb2cc2ead7",
+        "paragraph": "Object Relation Mapping",
+        "answer_id": 43,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:49:31.000000Z",
+        "updated_at": "2022-09-26T13:49:31.000000Z"
+    },
+    {
+        "id": 86,
+        "uuid": "975bae01448e4156b6d1bdcfbe1096e2",
+        "paragraph": "Object Relation Mapping",
+        "answer_id": 43,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:49:31.000000Z",
+        "updated_at": "2022-09-26T13:49:31.000000Z"
+    },
+    {
+        "id": 87,
+        "uuid": "975bae13f2ef488ebbad1004728aa3bf",
+        "paragraph": "Object Relation Master",
+        "answer_id": 44,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:49:43.000000Z",
+        "updated_at": "2022-09-26T13:49:43.000000Z"
+    },
+    {
+        "id": 88,
+        "uuid": "975bae13f3024813980ce6ef6a3c671f",
+        "paragraph": "Object Relation Master",
+        "answer_id": 44,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:49:43.000000Z",
+        "updated_at": "2022-09-26T13:49:43.000000Z"
+    },
+    {
+        "id": 89,
+        "uuid": "975bae1ed4924b9eb68cb55e5f333471",
+        "paragraph": "Object Relation Manager",
+        "answer_id": 45,
+        "language_id": 1,
+        "created_at": "2022-09-26T13:49:50.000000Z",
+        "updated_at": "2022-09-26T13:49:50.000000Z"
+    },
+    {
+        "id": 90,
+        "uuid": "975bae1ed4a844f280025bb1431d6508",
+        "paragraph": "Object Relation Manager",
+        "answer_id": 45,
+        "language_id": 2,
+        "created_at": "2022-09-26T13:49:50.000000Z",
+        "updated_at": "2022-09-26T13:49:50.000000Z"
+    },
+    {
+        "id": 91,
+        "uuid": "975bf907c8a243b6b62d05a72343d083",
+        "paragraph": "MVC",
+        "answer_id": 46,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:19:18.000000Z",
+        "updated_at": "2022-09-26T17:19:18.000000Z"
+    },
+    {
+        "id": 92,
+        "uuid": "975bf907c8b6411f94f54c0f522512ed",
+        "paragraph": "MVC",
+        "answer_id": 46,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:19:18.000000Z",
+        "updated_at": "2022-09-26T17:19:18.000000Z"
+    },
+    {
+        "id": 93,
+        "uuid": "975bf9227b28454b9cc460a80daf9cbf",
+        "paragraph": "MVVM",
+        "answer_id": 47,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:19:36.000000Z",
+        "updated_at": "2022-09-26T17:19:36.000000Z"
+    },
+    {
+        "id": 94,
+        "uuid": "975bf9227b3d43a1bebb015ceada7456",
+        "paragraph": "MVVM",
+        "answer_id": 47,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:19:36.000000Z",
+        "updated_at": "2022-09-26T17:19:36.000000Z"
+    },
+    {
+        "id": 95,
+        "uuid": "975bf92fee8440b89693ea783e6b5709",
+        "paragraph": "OOP",
+        "answer_id": 48,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:19:44.000000Z",
+        "updated_at": "2022-09-26T17:19:44.000000Z"
+    },
+    {
+        "id": 96,
+        "uuid": "975bf92fee9c4e5c999f591a7ddb5b89",
+        "paragraph": "OOP",
+        "answer_id": 48,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:19:44.000000Z",
+        "updated_at": "2022-09-26T17:19:44.000000Z"
+    },
+    {
+        "id": 97,
+        "uuid": "975bf969cd934af3be8f499558b72250",
+        "paragraph": "Singleton Design Pattern",
+        "answer_id": 49,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:20:22.000000Z",
+        "updated_at": "2022-09-26T17:20:22.000000Z"
+    },
+    {
+        "id": 98,
+        "uuid": "975bf969cda8446683acd2a33b5eb4ea",
+        "paragraph": "Singleton Design Pattern",
+        "answer_id": 49,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:20:22.000000Z",
+        "updated_at": "2022-09-26T17:20:22.000000Z"
+    },
+    {
+        "id": 99,
+        "uuid": "975bf9d2dc85416cb7f66be67e7151fb",
+        "paragraph": "php artisan cache:clearall",
+        "answer_id": 50,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:21:31.000000Z",
+        "updated_at": "2022-09-26T17:21:31.000000Z"
+    },
+    {
+        "id": 100,
+        "uuid": "975bf9d2dc9c4935a16e210630f840f1",
+        "paragraph": "php artisan cache:clearall",
+        "answer_id": 50,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:21:31.000000Z",
+        "updated_at": "2022-09-26T17:21:31.000000Z"
+    },
+    {
+        "id": 101,
+        "uuid": "975bf9de572a4577a55f7da509a5143a",
+        "paragraph": "php artisan clear:cache",
+        "answer_id": 51,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:21:39.000000Z",
+        "updated_at": "2022-09-26T17:21:39.000000Z"
+    },
+    {
+        "id": 102,
+        "uuid": "975bf9de57484d2880f1feb07ab9c060",
+        "paragraph": "php artisan clear:cache",
+        "answer_id": 51,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:21:39.000000Z",
+        "updated_at": "2022-09-26T17:21:39.000000Z"
+    },
+    {
+        "id": 103,
+        "uuid": "975bf9f0e83145439f1e95c7e91af921",
+        "paragraph": "php artisan cache:clear",
+        "answer_id": 52,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:21:51.000000Z",
+        "updated_at": "2022-09-26T17:21:51.000000Z"
+    },
+    {
+        "id": 104,
+        "uuid": "975bf9f0e8464e3ca1cea18f2ca37681",
+        "paragraph": "php artisan cache:clear",
+        "answer_id": 52,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:21:51.000000Z",
+        "updated_at": "2022-09-26T17:21:51.000000Z"
+    },
+    {
+        "id": 105,
+        "uuid": "975bfaf65c7245ae9ea6653a4612c64e",
+        "paragraph": "model",
+        "answer_id": 53,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:24:42.000000Z",
+        "updated_at": "2022-09-26T17:24:42.000000Z"
+    },
+    {
+        "id": 106,
+        "uuid": "975bfaf65c8641018b2b72d2cd63c4a1",
+        "paragraph": "model",
+        "answer_id": 53,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:24:42.000000Z",
+        "updated_at": "2022-09-26T17:24:42.000000Z"
+    },
+    {
+        "id": 107,
+        "uuid": "975bfb012f5d4e359e8d298f5826eeb8",
+        "paragraph": "controller",
+        "answer_id": 54,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:24:49.000000Z",
+        "updated_at": "2022-09-26T17:24:49.000000Z"
+    },
+    {
+        "id": 108,
+        "uuid": "975bfb012f7347ab83a1a763ce1699ab",
+        "paragraph": "controller",
+        "answer_id": 54,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:24:49.000000Z",
+        "updated_at": "2022-09-26T17:24:49.000000Z"
+    },
+    {
+        "id": 109,
+        "uuid": "975bfb0f08e8438dbf1ca8afdcb9428d",
+        "paragraph": "view",
+        "answer_id": 55,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:24:58.000000Z",
+        "updated_at": "2022-09-26T17:24:58.000000Z"
+    },
+    {
+        "id": 110,
+        "uuid": "975bfb0f08fd42c9a7a1819fafe405ca",
+        "paragraph": "view",
+        "answer_id": 55,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:24:58.000000Z",
+        "updated_at": "2022-09-26T17:24:58.000000Z"
+    },
+    {
+        "id": 111,
+        "uuid": "975bfb1ca06b4fc59f1105aceb60b2e6",
+        "paragraph": "public",
+        "answer_id": 56,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:25:07.000000Z",
+        "updated_at": "2022-09-26T17:25:07.000000Z"
+    },
+    {
+        "id": 112,
+        "uuid": "975bfb1ca08d49cdab2986acf9c6f62e",
+        "paragraph": "public",
+        "answer_id": 56,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:25:07.000000Z",
+        "updated_at": "2022-09-26T17:25:07.000000Z"
+    },
+    {
+        "id": 113,
+        "uuid": "975bfb89056d414a8d24fd29896627f5",
+        "paragraph": "$hashed = Hash::create('has-text');",
+        "answer_id": 57,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:26:18.000000Z",
+        "updated_at": "2022-09-26T17:26:18.000000Z"
+    },
+    {
+        "id": 114,
+        "uuid": "975bfb8905834089987c5a96dd02bbf8",
+        "paragraph": "$hashed = Hash::create('has-text');",
+        "answer_id": 57,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:26:18.000000Z",
+        "updated_at": "2022-09-26T17:26:18.000000Z"
+    },
+    {
+        "id": 115,
+        "uuid": "975bfb94c1e54dfdb89978c055a9b521",
+        "paragraph": "$hashed = Hash::make('has-text');",
+        "answer_id": 58,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:26:26.000000Z",
+        "updated_at": "2022-09-26T17:26:26.000000Z"
+    },
+    {
+        "id": 116,
+        "uuid": "975bfb94c1fb4eb1bdcfbb6ca1b715f5",
+        "paragraph": "$hashed = Hash::make('has-text');",
+        "answer_id": 58,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:26:26.000000Z",
+        "updated_at": "2022-09-26T17:26:26.000000Z"
+    },
+    {
+        "id": 117,
+        "uuid": "975bfba59c08427e953b203e4b11529f",
+        "paragraph": "$hashed = Hash::all('has-text');",
+        "answer_id": 59,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:26:37.000000Z",
+        "updated_at": "2022-09-26T17:26:37.000000Z"
+    },
+    {
+        "id": 118,
+        "uuid": "975bfba59c1b48df835a33f1ab38cf03",
+        "paragraph": "$hashed = Hash::all('has-text');",
+        "answer_id": 59,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:26:37.000000Z",
+        "updated_at": "2022-09-26T17:26:37.000000Z"
+    },
+    {
+        "id": 119,
+        "uuid": "975bfbc2e9194e8eb0b43abc761f5a87",
+        "paragraph": "$hashed = Hash('has-text');",
+        "answer_id": 60,
+        "language_id": 1,
+        "created_at": "2022-09-26T17:26:56.000000Z",
+        "updated_at": "2022-09-26T17:26:56.000000Z"
+    },
+    {
+        "id": 120,
+        "uuid": "975bfbc2e93b422d851cb53e198b7525",
+        "paragraph": "$hashed = Hash('has-text');",
+        "answer_id": 60,
+        "language_id": 2,
+        "created_at": "2022-09-26T17:26:56.000000Z",
+        "updated_at": "2022-09-26T17:26:56.000000Z"
+    }
+]

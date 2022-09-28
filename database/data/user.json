@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "uuid": "975a39d48e81421d970b06303c79ceeb",
+        "name": "Blackpearl",
+        "slug": "blackpearl",
+        "email": "blackpearl@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$jATHbS/f/3jGGzi7.H3qz.nurNX7XKAgF2iqTnBX4ndubgWxUjlzu",
+        "rank": null,
+        "created_at": "2022-09-25T20:28:50.000000Z",
+        "updated_at": "2022-09-25T21:46:19.000000Z"
+    },
+    {
+        "id": 12,
+        "uuid": "975bfc6916af4cec95479e7b2faaf0a9",
+        "name": "nuzha",
+        "slug": "nuzha",
+        "email": "nuzha@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$qGLQD/VywWPIA8idEv8Hg.5ACu6SVsms3oDv4TCav.5wcaq0OztBW",
+        "rank": null,
+        "created_at": "2022-09-26T17:28:50.000000Z",
+        "updated_at": "2022-09-26T17:28:50.000000Z"
+    },
+    {
+        "id": 13,
+        "uuid": "975bfc73dc8b498cb728d2bd5d42cfbc",
+        "name": "majd",
+        "slug": "majd",
+        "email": "majd@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$rItjR8B/g0GYeebNaObKhOYI0WXOxNDselkg6UT5vE81qXHoxxVby",
+        "rank": null,
+        "created_at": "2022-09-26T17:28:55.000000Z",
+        "updated_at": "2022-09-26T17:28:55.000000Z"
+    },
+    {
+        "id": 14,
+        "uuid": "975bfc83be2748fda3d4a5b42af0667f",
+        "name": "mhd",
+        "slug": "mhd",
+        "email": "mhd@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$/mzTJoDOY1a25OuSr6MbvejswgpXEo.EuWCLtFphB.UnJhDsauEcm",
+        "rank": null,
+        "created_at": "2022-09-26T17:29:05.000000Z",
+        "updated_at": "2022-09-26T17:29:05.000000Z"
+    }
+]
