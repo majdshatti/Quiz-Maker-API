@@ -33,7 +33,8 @@ class TakenQuizAnswerController extends Controller
         $currentActiveQuiz = $user->takenQuizzes->where("status", "active");
 
         if (!$currentActiveQuiz) {
-            throw new ErrorResException("there is no active quiz");
+            throw new ErrorResException("there is no active quiz
+            ");
         }
 
         // Check for more active quizzes or for no current active quizzes
