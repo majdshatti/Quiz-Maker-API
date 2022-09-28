@@ -4,6 +4,7 @@ namespace App\Http\Requests\Quiz;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Models\Language;
+
 class QuizCreateRequest extends FormRequest
 {
     /**
@@ -25,7 +26,7 @@ class QuizCreateRequest extends FormRequest
     {
         $langs = Language::all();
 
-        $rules = [];
+        $rules = ["level" => "required|numeric|gt:0|unique:quiz,level",];
 
         foreach ($langs as $lang) {
             $rules = array_merge($rules, [

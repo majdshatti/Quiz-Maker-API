@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "level": 1,
         "uuid": "975a39e5ef614d0586575aa1f0629137",
         "slug": "beginner",
         "created_at": "2022-09-25T20:29:02.000000Z",
@@ -8,6 +9,7 @@
     },
     {
         "id": 2,
+        "level": 3,
         "uuid": "975a3c57859242f6b7d7d88b5405777d",
         "slug": "advanced",
         "created_at": "2022-09-25T20:35:52.000000Z",
@@ -15,6 +17,7 @@
     },
     {
         "id": 3,
+        "level": 2,
         "uuid": "975a537d9fd84bb1a49016c1cfac0fa9",
         "slug": "intermediate",
         "created_at": "2022-09-25T21:40:35.000000Z",

@@ -38,7 +38,11 @@ class TakenQuiz extends Model
     }
 
     //Subject Quiz Relation
+<<<<<<< HEAD
     public function subjectQuiz()
+=======
+    public function subjectQuizzes()
+>>>>>>> 1ed0e235048c778e376eb792c41aaf9eba690305
     {
         return $this->belongsTo(QuizSubject::class);
     }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->uuid("uuid");
             $table->string("slug");
+            $table->integer("level");
             $table->timestamps();
         });
     }
