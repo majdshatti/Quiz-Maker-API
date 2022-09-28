@@ -19,14 +19,14 @@ class TakenQuiz extends Model
         "subject_quiz_id",
         "user_id",
         "created_at",
-        "updated_at"
+        "updated_at",
     ];
 
     // Hidden fields
     protected $hidden = ["id"];
 
     //Taken Quiz Answer Relation
-    public function takenQuizAnswer()
+    public function takenQuizAnswers()
     {
         return $this->hasMany(TakenQuizAnswer::class);
     }
@@ -38,11 +38,10 @@ class TakenQuiz extends Model
     }
 
     //Subject Quiz Relation
-    public function subjectQuizze()
+    public function subjectQuiz()
     {
         return $this->belongsTo(QuizSubject::class);
     }
-
 
     //***************************************/
     //*************** SCOPES ****************/
@@ -72,17 +71,9 @@ class TakenQuiz extends Model
         stringFilter($query, "status", $filters["status"] ?? false);
 
         // Relation filtering
-        relationFilter(
-            $query,
-            "user",
-            "name",
-            $filters["name"] ?? false
-        );
+        relationFilter($query, "user", "name", $filters["name"] ?? false);
         // Number filtering
-        numberFilter(
-            $query,
-            $filters["score"] ?? false
-        );
+        numberFilter($query, $filters["score"] ?? false);
         // Search Filter
         /*searchFilter(
             $query,
