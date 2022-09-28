@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "uuid": "975a39d4c9d243cba24e664b0702ed81",
+        "name": "English",
+        "code": "en",
+        "created_at": "2022-09-25T20:28:50.000000Z",
+        "updated_at": "2022-09-25T20:28:50.000000Z"
+    },
+    {
+        "id": 2,
+        "uuid": "975a39d4c9db43a19b31ca9ae78b2355",
+        "name": "Arabic",
+        "code": "ar",
+        "created_at": "2022-09-25T20:28:50.000000Z",
+        "updated_at": "2022-09-25T20:28:50.000000Z"
+    }
+]
