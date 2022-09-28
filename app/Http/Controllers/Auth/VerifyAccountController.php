@@ -13,7 +13,7 @@ class VerifyAccountController extends Controller
     //* @desc: Verify a user account
     //* @route: POST /api/verify/{token}
     //* @access: PUBLIC
-    public function verifyAccount($token)
+    public function verifyAccount($lang, $token)
     {
         $user = User::where("remember_token", "=", $token)->first();
 
